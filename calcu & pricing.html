@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Calculator - Trinetra Property Inspection</title>
+  <meta name="description"
+    content="Instant property inspection pricing calculator - Hyderabad. Transparent per sq.ft. rates with 360 camera option.">
+
+  <!-- Bootstrap 5 + Icons + AOS Animation -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <link rel="icon" type="image/png" href="img/icon.png" >
+
+  <style>
+    /* ===========================================
+       GLOBAL COLORS & TYPOGRAPHY
+    =========================================== */
+    :root {
+      --primary: #2d2d2d;
+      --accent: #d4c4a9;
+      --light: #f8f5f2;
+      --muted: #7a7a7a;
+      --green: #28a745;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #fff;
+      color: var(--primary);
+      scroll-behavior: smooth;
+    }
+
+    /* SECTION SPACING HELPERS */
+    .section-padding {
+      padding: 90px 0;
+      position: relative;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .section-subtitle {
+      font-size: 0.96rem;
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* ===========================================
+       HERO SECTION — PARALLAX (MATCH HOME THEME)
+    =========================================== */
+    .pricing-hero {
+      min-height: 75vh;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.7)),
+        url('img/ser.jpg') center/cover no-repeat fixed;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding-top: 140px;
+      padding-bottom: 80px;
+    }
+
+    @media (max-width: 768px) {
+      .pricing-hero {
+        background-attachment: scroll;
+        padding-top: 140px;
+      }
+    }
+
+    .badge-400 {
+      background: var(--accent);
+      color: var(--primary);
+      padding: 10px 28px;
+      font-size: 1.1rem;
+      font-weight: 800;
+      border-radius: 50px;
+      display: inline-block;
+      box-shadow: 0 12px 30px rgba(212, 196, 169, 0.4);
+    }
+
+    .pricing-hero h1 {
+      font-size: 2.4rem !important;
+      font-weight: 800;
+      margin-top: 16px;
+    }
+
+    .pricing-hero .lead {
+      font-size: 1rem !important;
+      opacity: 0.9;
+      max-width: 620px;
+      margin: 12px auto 0;
+    }
+
+    /* ===========================================
+       CALCULATOR CARD — REDUCED FONT SIZES
+    =========================================== */
+    .calc-wrapper {
+      background: var(--light);
+    }
+
+    .calc-card {
+      background: #fff;
+      border-radius: 30px;
+      padding: 40px 35px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+      border: 1px solid #eee3d5;
+    }
+
+    .calc-card h2 {
+      font-size: 1.7rem !important;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .form-label {
+      font-size: 0.92rem !important;
+      font-weight: 600;
+    }
+
+    .form-check-label {
+      font-size: 0.9rem !important;
+    }
+
+    .form-check-label.fs-6 {
+      font-size: 0.88rem !important;
+    }
+
+    .summary-box {
+      padding: 30px 10px;
+      border-radius: 24px;
+      background: #fdfaf5;
+      border: 1px solid #eadfce;
+      height: 100%;
+    }
+
+    .summary-box h3 {
+      font-size: 1.4rem !important;
+      font-weight: 700;
+    }
+
+    .summary-box table td {
+      font-size: 0.95rem !important;
+    }
+
+    .price-display {
+      font-size: 3rem !important;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--accent), #e8d9c1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .btn-enquiry {
+      background: var(--green);
+      color: white;
+      padding: 14px 40px;
+      border-radius: 50px;
+      font-size: 1.05rem !important;
+      font-weight: 700;
+      width: 100%;
+      margin-top: 20px;
+      border: none;
+      transition: 0.3s ease;
+      box-shadow: 0 12px 30px rgba(40, 167, 69, 0.4);
+    }
+
+    .btn-enquiry:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(40, 167, 69, 0.55);
+    }
+
+    /* ===========================================
+       HOW PRICING WORKS SECTION
+    =========================================== */
+    .pricing-info {
+      background: #fff;
+      border-top: 1px solid #eee4d7;
+      border-bottom: 1px solid #eee4d7;
+    }
+
+    .pricing-info-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 18px 16px;
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.06);
+      border: 1px solid #efe3d3;
+      height: 100%;
+    }
+
+    .pricing-info-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      background: #f4ede3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .pricing-info-icon i {
+      color: var(--primary);
+    }
+
+    .pricing-info-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .pricing-info-text {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    /* ===========================================
+       FINAL CTA
+    =========================================== */
+    .pricing-cta {
+      padding: 70px 0;
+      background: linear-gradient(135deg, var(--accent), #e8d9c1);
+      text-align: center;
+      color: #1e1e1e;
+    }
+
+    .pricing-cta h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .pricing-cta p {
+      font-size: 0.96rem;
+      max-width: 620px;
+      margin: 0 auto 18px;
+    }
+
+    .btn-solid {
+      display: inline-block;
+      background: #2d2d2d;
+      color: #ffffff !important;
+      padding: 14px 40px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: 0.3s ease;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-solid:hover {
+      transform: translateY(-4px);
+      background: #000000;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    }
+
+  
+
+    
+    /* FOOTER (same theme as other pages) */
+    footer {
+      background: var(--primary);
+      color: white;
+      padding: 80px 0 30px;
+    }
+
+    
+/* Clean styling + no blue line ever */
+.social-links-wrapper .social-icon-link {
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+}
+
+.social-links-wrapper .social-icon-link:hover i {
+    color: var(--light) !important;
+    transform: translateY(-4px);
+}
+
+/* Force icons to show - overrides any conflicts */
+.social-links-wrapper i {
+    font-family: "Font Awesome 6 Brands" !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    text-rendering: auto !important;
+    line-height: 1 !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top custom-nav">
+    <div class="container-fluid px-3 px-lg-4">
+      <!-- LOGO -->
+      <a class="navbar-brand" href="index.html">
+        <img src="img/Red and Black Modern Home Logo (1).png" alt="Trinetra" height="120">
+      </a>
+
+      <!-- TOGGLER -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- MENU -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-lg-auto gap-lg-4 gap-3 text-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="calcu &amp; pricing.html">Calculation &amp; Pricing</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        </ul>
+
+        <!-- PHONE -->
+        <div class="nav-phone d-none d-lg-block">
+          <a href="tel:+919876543210">
+            <i class="fa-solid fa-phone"></i> +91 98765 43210
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+<!-- HERO – H7 Premium Wide Style -->
+<section class="pricing-hero-h7" style="padding-top:80px; padding-bottom:80px; background:var(--light); margin-top: -13px;">
+  <div class="container">
+
+    <div class="text-center" data-aos="fade-up">
+
+      <span class="badge px-4 py-2 fw-bold" 
+        style="background: var(--accent); color: var(--primary); border-radius: 30px;">
+        400+ CHECKPOINTS
+      </span>
+
+      <h1 class="fw-bold mt-4"
+        style="font-size: 2.8rem; color: var(--primary); letter-spacing:-0.5px;">
+        Instant Pricing Calculator
+      </h1>
+
+      <!-- GOLD LINE -->
+      <div style="
+        width:120px;
+        height:4px;
+        background:var(--accent);
+        margin:14px auto 18px;
+        border-radius:20px;">
+      </div>
+
+      <p class="mt-2" style="color:var(--muted); font-size:1.05rem; max-width:650px; margin:0 auto;">
+        Get your exact inspection cost in seconds — transparent, up-to-date, and based on your flat size.
+      </p>
+
+      <a href="#calculator" class="btn-solid mt-4" style="padding: 12px 38px;">
+        Calculate Now →
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- SECTION 2: CALCULATOR -->
+    <section class="calc-wrapper section-padding" id="calculator">
+      <div class="container">
+        <div class="calc-card" data-aos="fade-up">
+          <div class="row g-5 align-items-stretch">
+            <!-- Left: Form -->
+            <div class="col-lg-7">
+              <h2 class="mb-4 fw-bold">Select Your Requirements</h2>
+
+              <!-- Service Type -->
+              <div class="mb-4">
+                <label class="form-label fw-bold">Service Type <span class="text-danger">*</span></label>
+                <div class="row g-3 mt-2">
+                  <div class="col-6 col-md-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="service" id="inspection" value="6">
+                      <label class="form-check-label fw-bold" for="inspection">Inspection</label>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="service" id="reinspection" value="4">
+                      <label class="form-check-label fw-bold" for="reinspection">Re-Inspection</label>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="service" id="combo" value="8">
+                      <label class="form-check-label fw-bold" for="combo">Combo Package</label>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="service" id="dampness" value="4">
+                      <label class="form-check-label fw-bold" for="dampness">Dampness</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Area & 360 -->
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <label class="form-label fw-bold">Area (Sq.ft.) <span class="text-danger">*</span></label>
+                  <input type="number" class="form-control form-control-lg" id="area" placeholder="e.g. 1250" min="100"
+                    max="10000">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-bold">With 360° Camera?</label>
+                  <div class="form-check form-switch mt-3">
+                    <input class="form-check-input" type="checkbox" id="camera">
+                    <label class="form-check-label fs-6" for="camera">Add 360° Virtual Tour (+₹3/sq.ft.)</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Property Type</label>
+                  <select class="form-select form-select-lg" id="property">
+                    <option>Apartment / Flat</option>
+                    <option>Villa</option>
+                    <option>Independent House</option>
+                    <option>Commercial</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Unit Type</label>
+                  <select class="form-select form-select-lg" id="unit">
+                    <option>1BHK</option>
+                    <option>2BHK</option>
+                    <option>3BHK</option>
+                    <option>4BHK+</option>
+                    <option>Penthouse</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label">Preferred Date</label>
+                  <input type="date" class="form-control form-control-lg" id="date">
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Summary -->
+            <div class="col-lg-5">
+              <div class="summary-box">
+                <h3 class="mb-4">Quotation</h3>
+                <div class="table-responsive">
+                  <table class="table table-borderless mb-0">
+                    <tbody>
+                      <tr>
+                        <td>Service</td>
+                        <td class="text-end fw-bold" id="sService">-</td>
+                      </tr>
+                      <tr>
+                        <td>Area</td>
+                        <td class="text-end" id="sArea">0 sq.ft.</td>
+                      </tr>
+                      <tr>
+                        <td>360° Camera</td>
+                        <td class="text-end" id="sCamera">No</td>
+                      </tr>
+                      <tr>
+                        <td>Property</td>
+                        <td class="text-end" id="sProperty">-</td>
+                      </tr>
+                      <tr>
+                        <td>Unit</td>
+                        <td class="text-end" id="sUnit">-</td>
+                      </tr>
+                      <tr>
+                        <td>Date</td>
+                        <td class="text-end" id="sDate">-</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <hr class="my-4">
+                <div class="text-center">
+                  <h2 class="price-display" id="totalPrice">₹0</h2>
+                  <p class="text-muted mb-0">Including all taxes</p>
+                </div>
+                <button class="btn-enquiry" onclick="sendToWhatsApp()">
+                  Make Enquiry on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: HOW PRICING WORKS -->
+    <section class="pricing-info section-padding">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">How your inspection price is calculated.</h2>
+          <p class="section-subtitle">
+            The calculator uses a clear per sq.ft. rate, adds optional 360° camera charges, and shows your total in
+            real time &mdash; no surprise add-ons later.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-up">
+            <div class="pricing-info-card">
+              <div class="pricing-info-icon">
+                <i class="fa-solid fa-ruler-combined"></i>
+              </div>
+              <h6 class="pricing-info-title">Per sq.ft. base rate</h6>
+              <p class="pricing-info-text">
+                Different services (Inspection, Re-Inspection, Combo, Dampness) have their own transparent per sq.ft.
+                rates.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+            <div class="pricing-info-card">
+              <div class="pricing-info-icon">
+                <i class="fa-solid fa-camera-rotate"></i>
+              </div>
+              <h6 class="pricing-info-title">Optional 360° camera</h6>
+              <p class="pricing-info-text">
+                If you enable 360° Virtual Tour, ₹3/sq.ft. is added. If you don’t need it, you don’t pay for it.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+            <div class="pricing-info-card">
+              <div class="pricing-info-icon">
+                <i class="fa-solid fa-file-circle-check"></i>
+              </div>
+              <h6 class="pricing-info-title">All taxes included</h6>
+              <p class="pricing-info-text">
+                The total you see on the calculator is the final amount you pay &mdash; inclusive of all applicable
+                taxes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: FINAL CTA -->
+    <section class="pricing-cta">
+      <div class="container">
+        <h2 data-aos="fade-up">Not sure which inspection package fits your flat?</h2>
+        <p data-aos="fade-up" data-aos-delay="80">
+          Share your project name, flat size and current stage (handover, resale, dampness). We’ll suggest the most
+          cost-effective inspection combination for you.
+        </p>
+        <a href="contact.html" class="btn-solid" data-aos="fade-up" data-aos-delay="140">
+          Get a quick recommendation →
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+   <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row gy-5 text-md-start">
+                <div class="col-lg-5">
+                    <div class="footer-logo mb-4 text-center text-lg-start">
+                        <img src="img/Red and Black Modern Home Logo.png" alt="Trinetra">
+                    </div>
+                    <h3 class="h4 fw-bold text-center text-lg-start">Trinetra Property Inspection</h3>
+                    <p class="mt-3 text-light opacity-90 text-center text-lg-start">
+                        Professional and detailed property inspection services across Hyderabad.
+                    </p>
+
+                </div>
+
+
+         <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="services.html">Our Services</a>
+                        <a href="calcu & pricing.html">Calculation &amp; Pricing</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-heading">Contact Us</h5>
+                    <div class="contact-info">
+                        <p class="mb-3"><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p class="mb-3"><i class="fas fa-phone"></i> +91 87654 32109</p>
+                        <p class="mb-3"><i class="fas fa-envelope"></i> info@trinetraproperty.in</p>
+                        <p class="mb-4"><i class="fas fa-map-marker-alt"></i>Hyderabad</p>
+                    </div>
+                    <div class="text-center text-lg-start">
+                        <a href="tel:+919876543210" class="book-btn mt-3">
+                            <i class="fas fa-phone">
+                            </i> Call 
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+   <!-- Social Media Icons - Left Side (Updated for FA6) -->
+<div class="social-links-wrapper mt-4 text-center text-lg-start">
+    <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener" class="social-icon-link me-4" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f" style="font-size: 1.5rem; color: var(--accent);"></i>
+    </a>
+    <a href="https://twitter.com/yourpage" target="_blank" rel="noopener" class="social-icon-link me-4" aria-label="Twitter">
+        <i class="fa-brands fa-twitter" style="font-size: 1.5rem; color: var(--accent);"></i>
+    </a>
+    <a href="https://www.linkedin.com/company/yourpage" target="_blank" rel="noopener" class="social-icon-link me-4" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in" style="font-size: 1.5rem; color: var(--accent);"></i>
+    </a>
+</div>
+            <div class="footer-bottom text-center">
+                © 2025 Trinetra Property Inspection. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+<div id="trinetra-loader">
+    <div class="loader-center">
+        <div class="loader-ring"></div>
+        <img src="img/Red and Black Modern Home Logo (1).png" class="loader-logo">
+    </div>
+</div>
+<script src="script.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 800, easing: 'ease-out-quart' });
+
+    // Attach listeners to ALL inputs that affect the summary
+    document.querySelectorAll('#area, input[name="service"], #camera, #property, #unit, #date').forEach(el => {
+      el.addEventListener('input', updatePrice);
+      el.addEventListener('change', updatePrice);
+    });
+
+    function updatePrice() {
+      const area = parseFloat(document.getElementById('area').value) || 0;
+      const rateElement = document.querySelector('input[name="service"]:checked');
+      const rate = rateElement ? parseFloat(rateElement.value) : 0;
+      const camera = document.getElementById('camera').checked;
+      const extra = camera ? 3 : 0;
+      const total = area * (rate + extra);
+
+      // Update Summary Fields
+      document.getElementById('sArea').textContent = area
+        ? area.toLocaleString('en-IN') + " sq.ft."
+        : "0 sq.ft.";
+      document.getElementById('sCamera').textContent = camera ? "Yes (+₹3/sq.ft.)" : "No";
+
+      document.getElementById('sProperty').textContent = document.getElementById('property').value || "-";
+      document.getElementById('sUnit').textContent = document.getElementById('unit').value || "-";
+
+      const dateValue = document.getElementById('date').value;
+      document.getElementById('sDate').textContent = dateValue
+        ? new Date(dateValue).toLocaleDateString('en-IN')
+        : "Not selected";
+
+      // Service Name
+      const selectedService = document.querySelector('input[name="service"]:checked');
+      document.getElementById('sService').textContent = selectedService
+        ? selectedService.parentElement.textContent.trim()
+        : "-";
+
+      // Total Price
+      document.getElementById('totalPrice').textContent = total > 0
+        ? "₹" + total.toLocaleString('en-IN')
+        : "₹0";
+    }
+
+    function sendToWhatsApp() {
+      const area = document.getElementById('area').value || "0";
+      const selectedServiceRadio = document.querySelector('input[name="service"]:checked');
+
+      if (!area || area <= 0 || !selectedServiceRadio) {
+        alert("Please enter area and select a service");
+        return;
+      }
+
+      const service = selectedServiceRadio.parentElement.textContent.trim();
+      const camera = document.getElementById('camera').checked ? "Yes" : "No";
+      const property = document.getElementById('property').value;
+      const unit = document.getElementById('unit').value;
+      const date = document.getElementById('date').value
+        ? new Date(document.getElementById('date').value).toLocaleDateString('en-IN')
+        : "Flexible";
+      const total = document.getElementById('totalPrice').textContent;
+
+      const msg = `*New Enquiry - Price Calculator*%0A%0A` +
+        `*Service:* ${service}%0A` +
+        `*Area:* ${area} sq.ft.%0A` +
+        `*360° Camera:* ${camera}%0A` +
+        `*Property Type:* ${property}%0A` +
+        `*Unit Type:* ${unit}%0A` +
+        `*Preferred Date:* ${date}%0A` +
+        `*Total Cost:* ${total}%0A%0A` +
+        `Please confirm availability and send payment link. Thank you!`;
+
+      window.open("https://wa.me/919876543210?text=" + msg, "_blank");
+    }
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 100);
+    });
+
+    // Run once on load
+    updatePrice();
+  </script>
+</body>
+
+</html>

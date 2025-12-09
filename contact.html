@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - Trinetra Property Inspection</title>
+
+  <!-- Bootstrap 5 + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <link rel="icon" type="image/png" href="img/icon.png" >
+
+  <style>
+    :root {
+      --primary: #2d2d2d;
+      --accent: #d4c4a9;
+      --light: #f8f5f2;
+      --muted: #7a7a7a;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: var(--light);
+      color: var(--primary);
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    /* ACTIVE NAV LINK */
+    .nav-link.active {
+      color: var(--accent) !important;
+    }
+
+    .nav-link.active::after {
+      width: 70%;
+    }
+
+    /* =========================
+       HERO – GLASS CARD ON IMAGE
+       ========================= */
+    .contact-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 160px 0 120px;
+      color: #ffffff;
+      overflow: hidden;
+    }
+
+    .contact-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(120deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+        url("img/frames-for-your-heart-mR1CIDduGLc-unsplash.jpg");
+      background-size: cover;
+      background-position: center;
+      filter: blur(1px);
+      transform: scale(1.03);
+      z-index: -2;
+    }
+
+    .contact-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left,
+          rgba(212, 196, 169, 0.4),
+          transparent 55%);
+      z-index: -1;
+    }
+
+    .contact-hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .contact-pill i {
+      color: var(--accent);
+    }
+
+    .contact-hero-title {
+      font-size: clamp(2.4rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      margin-top: 16px;
+      margin-bottom: 10px;
+    }
+
+    .contact-hero-sub {
+      max-width: 520px;
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .contact-hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 18px;
+      margin-top: 16px;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .contact-hero-meta span i {
+      color: var(--accent);
+      margin-right: 6px;
+    }
+
+    .contact-hero-cta {
+      margin-top: 22px;
+    }
+
+    .btn-solid {
+      display: inline-block;
+      background: #2d2d2d;
+      color: #ffffff !important;
+      padding: 12px 34px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: 0.3s ease;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-solid:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+      background: #000000;
+    }
+
+    /* GLASS FORM CARD */
+    .contact-glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 26px;
+      padding: 28px 24px;
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+      color: #ffffff;
+    }
+
+    .contact-glass-card h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .contact-glass-card p.small {
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 18px;
+      font-size: 0.88rem;
+    }
+
+    .form-control,
+    .form-select,
+    .form-control:focus,
+    .form-select:focus {
+      border-radius: 14px;
+      padding: 12px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(0, 0, 0, 0.22);
+      color: #ffffff;
+      font-size: 0.92rem;
+      box-shadow: none;
+    }
+
+    .form-control::placeholder,
+    .form-select {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .form-select option {
+      color: #000;
+    }
+
+    .btn-submit {
+      background: var(--accent);
+      color: #2d2d2d;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 1rem;
+      width: 100%;
+      transition: 0.3s ease;
+      box-shadow: 0 14px 30px rgba(212, 196, 169, 0.5);
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 40px rgba(212, 196, 169, 0.75);
+    }
+
+    @media (max-width: 992px) {
+      .contact-hero {
+        padding-top: 150px;
+        padding-bottom: 90px;
+        text-align: center;
+        margin-top: -13px;
+      }
+
+      .contact-hero-sub {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .contact-hero-meta {
+        justify-content: center;
+      }
+
+      .contact-glass-card {
+        margin-top: 26px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .contact-hero {
+        min-height: unset;
+      }
+    }
+
+    /* =========================
+       OFFICE SECTION
+       ========================= */
+    .office-section {
+      padding: 80px 0 90px;
+      background: #ffffff;
+      border-top: 1px solid #e6ded1;
+    }
+
+    .office-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-bottom: 6px;
+      text-align: center;
+    }
+
+    .office-title {
+      font-size: 2rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .office-subtitle {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.96rem;
+      max-width: 620px;
+      margin: 0 auto 40px;
+    }
+
+    .office-map {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    .office-info h3 {
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+
+    .office-info p {
+      color: #444;
+      margin-bottom: 6px;
+      font-size: 0.94rem;
+    }
+
+    .office-info i {
+      color: var(--accent);
+      width: 22px;
+      margin-right: 6px;
+    }
+
+    .office-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #f4ede3;
+      font-size: 0.78rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+  
+    /* FOOTER (match theme) */
+    footer {
+      background: var(--primary);
+      color: white;
+      padding: 80px 0 30px;
+      text-align: center;
+    }
+
+    .footer-logo img {
+      height: 120px;
+    }
+
+    .footer-heading {
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .footer-links a {
+      color: #ddd;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.92rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+      padding-left: 6px;
+    }
+
+    .contact-info i {
+      color: var(--accent);
+      width: 25px;
+    }
+
+    .book-btn {
+      background: var(--accent);
+      color: #2d2d2d;
+      padding: 12px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 5px 20px rgba(212, 196, 169, 0.4);
+      display: inline-block;
+      margin-top: 8px;
+    }
+
+    .book-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 22px;
+      margin-top: 40px;
+      color: #aaa;
+      font-size: 0.86rem;
+    }
+
+    
+/* Clean styling + no blue line ever */
+.social-links-wrapper .social-icon-link {
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+}
+
+.social-links-wrapper .social-icon-link:hover i {
+    color: var(--light) !important;
+    transform: translateY(-4px);
+}
+
+/* Force icons to show - overrides any conflicts */
+.social-links-wrapper i {
+    font-family: "Font Awesome 6 Brands" !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    text-rendering: auto !important;
+    line-height: 1 !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top custom-nav">
+    <div class="container-fluid px-3 px-lg-4">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/Red and Black Modern Home Logo (1).png" alt="Trinetra" height="120" />
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-lg-auto gap-lg-4 gap-3 text-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="calcu &amp; pricing.html">Calculation &amp; Pricing</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        </ul>
+
+        <div class="nav-phone d-none d-lg-block">
+          <a href="tel:+919876543210">
+            <i class="fa-solid fa-phone"></i> +91 98765 43210
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO – GLASS CARD ON BLURRED BACKGROUND -->
+    <section class="contact-hero" id="hero">
+      <div class="container contact-hero-content">
+        <div class="row g-5 align-items-center">
+          <!-- LEFT TEXT -->
+          <div class="col-lg-6">
+            <div class="contact-pill">
+              <i class="fa-solid fa-headset"></i> Contact · Inspection Support
+            </div>
+            <h1 class="contact-hero-title">
+              Book your property inspection in just a few clicks.
+            </h1>
+            <p class="contact-hero-sub">
+              Share your details and our inspection team will call you back with slot availability, pricing and the
+              best inspection combination for your flat.
+            </p>
+            <div class="contact-hero-meta">
+              <span><i class="fa-solid fa-location-dot"></i> Hyderabad &amp; nearby suburbs</span>
+              <span><i class="fa-solid fa-clipboard-check"></i> 400+ point checklist</span>
+              <span><i class="fa-brands fa-whatsapp"></i> Direct WhatsApp follow-up</span>
+            </div>
+          
+          </div>
+
+          <!-- RIGHT GLASS FORM CARD -->
+          <div class="col-lg-6" id="enquiry">
+            <div class="contact-glass-card">
+              <h2>Tell us about your property</h2>
+              <p class="small mb-3">
+                Fill this quick form and we’ll respond over WhatsApp or call with inspection options and next steps.
+              </p>
+              <form id="enquiryForm" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" id="name" placeholder="Your Name *" required />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="tel" class="form-control" id="phone" placeholder="Phone (+91) *" pattern="[0-9]{10}"
+                      required />
+                  </div>
+                  <div class="col-12">
+                    <input type="email" class="form-control" id="email" placeholder="Email (optional)" />
+                  </div>
+                  <div class="col-12">
+                    <input type="text" class="form-control" id="address"
+                      placeholder="Property Address / Location *" required />
+                  </div>
+                  <div class="col-12">
+                    <select class="form-select" id="propertyType" required>
+                      <option value="">Select Property Type *</option>
+                      <option>2BHK / 3BHK Apartment</option>
+                      <option>Independent House / Villa</option>
+                      <option>Commercial Property</option>
+                      <option>Plot / Under Construction</option>
+                      <option>NRI Property Check</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <textarea class="form-control" id="concerns" rows="3"
+                      placeholder="Any specific concerns? (e.g., leakage, cracks, wiring)"></textarea>
+                  </div>
+                  <div class="col-12 mt-2">
+                    <button type="submit" class="btn-submit">
+                      Submit Enquiry via WhatsApp
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- OFFICE SECTION -->
+    <section class="office-section">
+      <div class="container">
+        <div class="office-label">Our office</div>
+        <h2 class="office-title">Visit us in Hyderabad, or connect online.</h2>
+        <p class="office-subtitle">
+          We’re headquartered in Hyderabad and support inspections across multiple projects and localities. Meetings are
+          by prior appointment so we can give you focused time.
+        </p>
+
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <div class="office-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.299!2d78.368!3d17.443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93c6d8e3b5b5%3A0x1234567890abcdef!2sShaikpet%2C%20Hyderabad!5e0!3m2!1sen!2sin!4v1234567890"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="office-info">
+              <span class="office-badge">Head office · Hyderabad</span>
+              <h3>Trinetra Property Inspection</h3>
+              <p>
+                Ritvik Mansion, Flat No. 201<br />
+                Vinayak Nagar, Shaikpet<br />
+                Hyderabad, Telangana 500008<br />
+                India
+              </p>
+              <p><i class="fas fa-envelope"></i> info@trinetraproperty.in</p>
+              <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+              <p><i class="fab fa-whatsapp"></i> +91 98765 43210</p>
+              <p class="mt-3" style="font-size: 0.9rem; color: var(--muted);">
+                For detailed discussions, we recommend scheduling a call first. In many cases, we can guide you fully
+                over phone and WhatsApp.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row gy-5 text-md-start">
+                <div class="col-lg-5">
+                    <div class="footer-logo mb-4 text-center text-lg-start">
+                        <img src="img/Red and Black Modern Home Logo.png" alt="Trinetra">
+                    </div>
+                    <h3 class="h4 fw-bold text-center text-lg-start">Trinetra Property Inspection</h3>
+                    <p class="mt-3 text-light opacity-90 text-center text-lg-start">
+                        Professional and detailed property inspection services across Hyderabad.
+                    </p>
+
+                </div>
+
+
+         <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="services.html">Our Services</a>
+                        <a href="calcu & pricing.html">Calculation &amp; Pricing</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-heading">Contact Us</h5>
+                    <div class="contact-info">
+                        <p class="mb-3"><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p class="mb-3"><i class="fas fa-phone"></i> +91 87654 32109</p>
+                        <p class="mb-3"><i class="fas fa-envelope"></i> info@trinetraproperty.in</p>
+                        <p class="mb-4"><i class="fas fa-map-marker-alt"></i>Hyderabad</p>
+                    </div>
+                    <div class="text-center text-lg-start">
+                        <a href="tel:+919876543210" class="book-btn mt-3">
+                            <i class="fas fa-phone">
+                            </i> Call 
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+   <!-- Social Media Icons - Left Side (Updated for FA6) -->
+<div class="social-links-wrapper mt-4 text-center text-lg-start">
+    <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener" class="social-icon-link me-4" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f" style="font-size: 1.5rem; color: var(--accent);"></i>
+    </a>
+    <a href="https://twitter.com/yourpage" target="_blank" rel="noopener" class="social-icon-link me-4" aria-label="Twitter">
+        <i class="fa-brands fa-twitter" style="font-size: 1.5rem; color: var(--accent);"></i>
+    </a>
+    <a href="https://www.linkedin.com/company/yourpage" target="_blank" rel="noopener" class="social-icon-link me-4" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in" style="font-size: 1.5rem; color: var(--accent);"></i>
+    </a>
+</div>
+            <div class="footer-bottom text-center">
+                © 2025 Trinetra Property Inspection. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+<div id="trinetra-loader">
+    <div class="loader-center">
+        <div class="loader-ring"></div>
+        <img src="img/Red and Black Modern Home Logo (1).png" class="loader-logo">
+    </div>
+</div>
+<script src="script.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Form Submission → WhatsApp
+    document.getElementById('enquiryForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const address = document.getElementById('address').value.trim();
+      const propertyType = document.getElementById('propertyType').value;
+      const concerns = document.getElementById('concerns').value.trim();
+
+      if (!name || !phone || !address || !propertyType) {
+        alert('Please fill all required fields (Name, Phone, Property Address, Property Type)');
+        return;
+      }
+
+      if (!/^\d{10}$/.test(phone.replace(/\D/g, ''))) {
+        alert('Please enter a valid 10-digit phone number');
+        return;
+      }
+
+      let message = `*New Property Inspection Enquiry*%0A%0A`;
+      message += `Name: ${name}%0A`;
+      message += `Phone: +91 ${phone}%0A`;
+      if (email) message += `Email: ${email}%0A`;
+      message += `Property Address: ${address}%0A`;
+      message += `Property Type: ${propertyType}%0A`;
+      if (concerns) message += `%0AIssues/Concerns: ${concerns}%0A`;
+      message += `%0ANeed more details about services.`;
+
+      const whatsappURL = `https://wa.me/919876543210?text=${message}`;
+      window.open(whatsappURL, '_blank');
+    });
+  </script>
+</body>
+
+</html>

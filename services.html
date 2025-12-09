@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services - Trinetra Property Inspection</title>
+  <meta name="description"
+    content="Explore Trinetra Property Inspection services – Complete Property Inspection, Re-Inspection (Post-Repair Verification), Combo Package and Advanced Dampness & Leakage Detection using thermal and moisture tools." />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+     <link rel="icon" type="image/png" href="img/icon.png" >
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    :root {
+      --primary: #2d2d2d;
+      --accent: #d4c4a9;
+      --light: #f8f5f2;
+      --muted: #7a7a7a;
+      --white: #ffffff;
+      --soft-border: #e3ded6;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: var(--light);
+      color: var(--primary);
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* active nav */
+    .nav-link.active {
+      color: var(--accent) !important;
+    }
+
+    .nav-link.active::after {
+      width: 70%;
+    }
+
+    .svc-section {
+      padding: 90px 0;
+      position: relative;
+    }
+
+    .svc-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .svc-title {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .svc-subtitle {
+      font-size: 0.96rem;
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* 1️⃣ NEW HERO – FULL-WIDTH IMAGE + FLOATING WHITE CARD (H4 STYLE) */
+    .svc-hero {
+      padding-top: 140px;
+      padding-bottom: 40px;
+      background: #f3ede5;
+    }
+
+    .svc-hero-inner {
+      position: relative;
+    }
+
+    .svc-hero-image-wrapper {
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+      margin-top: -100px;
+    }
+
+    .svc-hero-image-wrapper img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .svc-hero-card {
+      position: relative;
+      max-width: 520px;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px 22px 20px;
+      border: 1px solid var(--soft-border);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+      margin-top: -70px;
+      margin-left: 40px;
+    }
+
+    .svc-hero-tag {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .svc-hero-heading {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .svc-hero-text {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 14px;
+    }
+
+    .svc-hero-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .svc-hero-meta-row span i {
+      color: var(--accent);
+      margin-right: 6px;
+    }
+
+    .svc-hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .svc-hero-pill {
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #f4ede3;
+      color: #555;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-right: 6px;
+    }
+
+    .svc-hero-pill i {
+      color: var(--primary);
+    }
+
+    @media (max-width: 992px) {
+      .svc-hero {
+        padding-top: 130px;
+        margin-top: -12px;
+      }
+
+      .svc-hero-card {
+        margin-left: 0;
+        margin-top: 12px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .svc-hero-image-wrapper img {
+        height: 260px;
+      }
+    }
+
+    /* 2️⃣ QUICK STRIP – 3 HIGHLIGHTS */
+    .svc-strip {
+      background: #ffffff;
+      border-top: 1px solid var(--soft-border);
+      border-bottom: 1px solid var(--soft-border);
+    }
+
+    .svc-strip-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 12px 10px;
+    }
+
+    .svc-strip-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: #f4ede3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .svc-strip-icon i {
+      font-size: 0.9rem;
+      color: var(--primary);
+    }
+
+    .svc-strip-text-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .svc-strip-text-desc {
+      font-size: 0.83rem;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    /* 3️⃣ MAIN SERVICES – FULL WIDTH SPLIT SECTIONS */
+    .svc-main {
+      background: var(--light);
+    }
+
+    .svc-main-alt {
+      background: #ffffff;
+      border-top: 1px solid var(--soft-border);
+      border-bottom: 1px solid var(--soft-border);
+    }
+
+    .svc-main-img-wrapper {
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .svc-main-img-wrapper img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .svc-main-tagline {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .svc-main-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 12px 0 16px;
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    .svc-main-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .svc-main-list i {
+      color: var(--accent);
+      font-size: 0.9rem;
+      margin-top: 3px;
+    }
+
+    .svc-main-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* 4️⃣ WHAT WE CHECK – CATEGORY-WISE */
+    .svc-coverage {
+      background: #ffffff;
+      border-top: 1px solid var(--soft-border);
+      border-bottom: 1px solid var(--soft-border);
+    }
+
+    .svc-coverage-block {
+      margin-bottom: 18px;
+    }
+
+    .svc-coverage-title {
+      font-size: 0.96rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .svc-coverage-title i {
+      color: var(--accent);
+    }
+
+    .svc-coverage-text {
+      font-size: 0.88rem;
+      color: #555;
+      margin-bottom: 0;
+    }
+
+    /* 5️⃣ REAL-WORLD SCENARIOS – PARALLAX STRIP */
+    .svc-scenarios {
+      position: relative;
+      color: #ffffff;
+      overflow: hidden;
+    }
+
+    .svc-scenarios-bg.parallax-bg {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(120deg,
+          rgba(0, 0, 0, 0.82),
+          rgba(0, 0, 0, 0.55)),
+        url("img/ins.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      z-index: 1;
+    }
+
+    .svc-scenarios-inner {
+      position: relative;
+      z-index: 2;
+    }
+
+    .svc-scenario-card {
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 16px 16px 18px;
+      backdrop-filter: blur(10px);
+      height: 100%;
+    }
+
+    .svc-scenario-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: rgba(255, 255, 255, 0.78);
+      margin-bottom: 4px;
+    }
+
+    .svc-scenario-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #ffffff;
+    }
+
+    .svc-scenario-text {
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 0;
+    }
+
+    /* 6️⃣ ON THE DAY OF INSPECTION – NEW DESIGN */
+    .svc-day {
+      background: var(--light);
+    }
+
+    .svc-day-steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .svc-day-card {
+      background: #ffffff;
+      border-radius: 18px;
+      border: 1px solid var(--soft-border);
+      padding: 16px 14px 18px;
+      height: 100%;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.05);
+    }
+
+    .svc-day-step {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .svc-day-title {
+      font-size: 0.96rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .svc-day-text {
+      font-size: 0.86rem;
+      color: #555;
+      margin-bottom: 0;
+    }
+
+    .svc-day-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      background: #f4ede3;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+
+    .svc-day-icon i {
+      color: var(--primary);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 992px) {
+      .svc-day-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 576px) {
+      .svc-day-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 7️⃣ TOOLS & TECH – CARDS */
+    .svc-tools {
+      background: #ffffff;
+    }
+
+    .svc-tools-card {
+      background: var(--light);
+      border-radius: 18px;
+      padding: 16px 14px;
+      border: 1px dashed var(--soft-border);
+      height: 100%;
+    }
+
+    .svc-tools-title {
+      font-size: 0.96rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .svc-tools-text {
+      font-size: 0.86rem;
+      color: #555;
+      margin-bottom: 0;
+    }
+
+    /* 8️⃣ WHO WE HELP */
+    .svc-personas {
+      background: #f3ece4;
+    }
+
+    .svc-persona-card {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 18px 16px;
+      border: 1px solid var(--soft-border);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+      height: 100%;
+    }
+
+    .svc-persona-tag {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .svc-persona-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .svc-persona-text {
+      font-size: 0.88rem;
+      color: #555;
+      margin-bottom: 0;
+    }
+
+    /* 9️⃣ FINAL CTA */
+    .svc-final-cta {
+      position: relative;
+      padding: 80px 0;
+      background: radial-gradient(circle at top left,
+          rgba(212, 196, 169, 0.35),
+          #f3ece0 70%);
+      color: #1e1e1e;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .svc-final-cta h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .svc-final-cta p {
+      font-size: 0.96rem;
+      color: #4a4a4a;
+      max-width: 620px;
+      margin: 0 auto 18px;
+    }
+
+    .svc-final-cta .btn-solid {
+      background: #2d2d2d;
+      color: #ffffff;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    /* PARALLAX DISABLE ON MOBILE */
+    @media (max-width: 768px) {
+      .svc-scenarios-bg {
+        background-attachment: scroll;
+      }
+    }
+
+    .btn-solid {
+      display: inline-block;
+      background: #2d2d2d;
+      color: #ffffff !important;
+      padding: 12px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: 0.3s ease;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-solid:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+      background: #000000;
+    }
+
+    
+/* Clean styling + no blue line ever */
+.social-links-wrapper .social-icon-link {
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+}
+
+.social-links-wrapper .social-icon-link:hover i {
+    color: var(--light) !important;
+    transform: translateY(-4px);
+}
+
+/* Force icons to show - overrides any conflicts */
+.social-links-wrapper i {
+    font-family: "Font Awesome 6 Brands" !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    text-rendering: auto !important;
+    line-height: 1 !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR (Services active) -->
+  <nav class="navbar navbar-expand-lg fixed-top custom-nav">
+    <div class="container-fluid px-3 px-lg-4">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/Red and Black Modern Home Logo (1).png" alt="Trinetra" height="120">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-lg-auto gap-lg-4 gap-3 text-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="calcu &amp; pricing.html">Calculation &amp; Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        </ul>
+
+        <div class="nav-phone d-none d-lg-block">
+          <a href="tel:+919876543210">
+            <i class="fa-solid fa-phone"></i> +91 98765 43210
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- 1️⃣ HERO – FULL-WIDTH IMAGE + FLOATING CARD -->
+    <section class="svc-hero" id="hero">
+      <div class="container">
+        <div class="svc-hero-inner">
+          <div class="row g-4">
+            <div class="col-12" data-aos="fade-up">
+              <div class="svc-hero-image-wrapper">
+                <img src="img/ser.jpg" alt="Trinetra Property Inspection Services" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-7 col-md-10" data-aos="fade-up" data-aos-delay="80">
+              <div class="svc-hero-card">
+                <div class="svc-hero-tag">Inspection services · Hyderabad</div>
+                <h1 class="svc-hero-heading">Powerful inspections to protect your biggest purchase.</h1>
+                <p class="svc-hero-text">
+                  Trinetra focuses on doing a few things extremely well. Our Complete Property Inspection, Re-Inspection,
+                  Combo Package and Advanced Dampness Diagnosis work together to ensure your builder actually delivers
+                  what was promised.
+                </p>
+                <div class="svc-hero-meta-row">
+                  <span><i class="fa-solid fa-location-dot"></i> Hyderabad &amp; nearby suburbs</span>
+                  <span><i class="fa-solid fa-clipboard-check"></i> 400+ scientific checkpoints</span>
+                  <span><i class="fa-solid fa-camera-retro"></i> Photo-backed digital report</span>
+                </div>
+                <div class="svc-hero-cta-row">
+                  <a href="#complete-inspection" class="btn btn-primary-soft btn-sm">View Complete Inspection</a>
+                  <a href="#reinspection" class="btn btn-outline-accent btn-sm">View Re-Inspection</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 d-none d-lg-flex align-items-end justify-content-lg-end" data-aos="fade-left"
+              data-aos-delay="120">
+              <div>
+                <span class="svc-hero-pill"><i class="fa-solid fa-shield-halved"></i> Buyer-first, not builder-tied</span>
+                <span class="svc-hero-pill"><i class="fa-solid fa-wand-magic-sparkles"></i> Non-destructive tools</span>
+                <span class="svc-hero-pill"><i class="fa-solid fa-phone-volume"></i> Post-report clarifications</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2️⃣ QUICK STRIP – 3 HIGHLIGHTS -->
+    <section class="svc-strip">
+      <div class="container py-3">
+        <div class="row g-3">
+          <div class="col-md-4" data-aos="fade-up">
+            <div class="svc-strip-item">
+              <div class="svc-strip-icon">
+                <i class="fa-solid fa-clipboard-list"></i>
+              </div>
+              <div>
+                <div class="svc-strip-text-title">400+ point checklist</div>
+                <p class="svc-strip-text-desc">
+                  Civil, electrical, plumbing, finishing &amp; dampness – mapped systematically room by room.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+            <div class="svc-strip-item">
+              <div class="svc-strip-icon">
+                <i class="fa-solid fa-user-tie"></i>
+              </div>
+              <div>
+                <div class="svc-strip-text-title">Engineer-led inspections</div>
+                <p class="svc-strip-text-desc">
+                  Conducted by professionals with practical site understanding – not brokers or sales executives.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="140">
+            <div class="svc-strip-item">
+              <div class="svc-strip-icon">
+                <i class="fa-solid fa-file-circle-check"></i>
+              </div>
+              <div>
+                <div class="svc-strip-text-title">Builder-ready reporting</div>
+                <p class="svc-strip-text-desc">
+                  Snags written in simple, clear language with photos – easy for builders to understand and action.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3️⃣ MAIN SERVICE 1 – COMPLETE PROPERTY INSPECTION -->
+    <section class="svc-main svc-section" id="complete-inspection">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="svc-main-img-wrapper">
+              <img src="img/ins.jpg" alt="Complete Property Inspection" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="svc-label">Service 01</div>
+            <h2 class="svc-title">Complete Property Inspection</h2>
+            <p class="svc-main-tagline">
+              A 400+ checkpoint scientific inspection before you take possession or finalize payment.
+            </p>
+            <p class="svc-subtitle text-start">
+              We inspect every corner of your flat using advanced tools and a structured checklist – from structural
+              cracks to hidden seepage, electrical safety to plumbing pressure.
+            </p>
+            <ul class="svc-main-list">
+              <li><i class="fa-solid fa-circle-check"></i> Civil &amp; finishing – tiles, slopes, hollowness, cracks, plaster, paint.</li>
+              <li><i class="fa-solid fa-circle-check"></i> Plumbing – pressure, leak indications, drain slopes, fixtures &amp; traps.</li>
+              <li><i class="fa-solid fa-circle-check"></i> Electrical – DB layout, basic earthing signs, switch &amp; socket behaviour.</li>
+              <li><i class="fa-solid fa-circle-check"></i> Doors &amp; windows – alignment, gaps, locks, hinges and operation.</li>
+              <li><i class="fa-solid fa-circle-check"></i> Dampness awareness – suspicious patches, salt deposits, potential seepage zones.</li>
+            </ul>
+            <p class="svc-main-note">
+              Ideal for: <strong>New handovers</strong>, <strong>ready-to-move homes</strong>, and <strong>resale
+                properties</strong> before final payment.
+            </p>
+            <div class="mt-3 d-flex flex-wrap gap-2">
+              <a href="contact.html" class="btn btn-primary-soft btn-sm">Book Complete Inspection</a>
+              <a href="calcu &amp; pricing.html" class="btn btn-outline-accent btn-sm">View pricing</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4️⃣ MAIN SERVICE 2 – RE-INSPECTION -->
+    <section class="svc-main-alt svc-section" id="reinspection">
+      <div class="container">
+        <div class="row g-5 align-items-center flex-lg-row-reverse">
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="svc-main-img-wrapper">
+              <img src="img/re-ins.jpg" alt="Re-Inspection Post-Repair Verification" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="svc-label">Service 02</div>
+            <h2 class="svc-title">Re-Inspection (Post-Repair Verification)</h2>
+            <p class="svc-main-tagline">
+              Ensure builder actually fixed everything – not just covered it with putty and paint.
+            </p>
+            <p class="svc-subtitle text-start">
+              After you share our first report and the builder claims “all issues are rectified”, we return to verify
+              every major snag – with before/after evidence.
+            </p>
+            <ul class="svc-main-list">
+              <li><i class="fa-solid fa-circle-check"></i> Point-by-point verification of previously listed snags.</li>
+              <li><i class="fa-solid fa-circle-check"></i> Before vs after photo comparison for key issues.</li>
+              <li><i class="fa-solid fa-circle-check"></i> Confirmation if repair is properly done or just cosmetically hidden.</li>
+              <li><i class="fa-solid fa-circle-check"></i> New major issues observed during revisit are also highlighted.</li>
+              <li><i class="fa-solid fa-circle-check"></i> Final documented closure so you can sign possession with confidence.</li>
+            </ul>
+            <p class="svc-main-note">
+              Best paired with: <strong>Complete Property Inspection</strong> &mdash; use both to close the loop before
+              moving in.
+            </p>
+            <div class="mt-3 d-flex flex-wrap gap-2">
+              <a href="contact.html" class="btn btn-primary-soft btn-sm">Book Re-Inspection</a>
+              <a href="calcu &amp; pricing.html" class="btn btn-outline-accent btn-sm">See combo benefits</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5️⃣ NEW SERVICE 3 – COMBO PACKAGE -->
+    <section class="svc-main svc-section" id="combo-package">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="svc-main-img-wrapper">
+              <img src="img/ser.jpg" alt="Combo Package Complete + Re-Inspection" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="svc-label">Service 03</div>
+            <h2 class="svc-title">Combo Package – Complete + Re-Inspection</h2>
+            <p class="svc-main-tagline">
+              Both inspections bundled together for maximum peace of mind (and better value).
+            </p>
+            <p class="svc-subtitle text-start">
+              With the Combo Package you don’t have to decide twice. You get a detailed Complete Property Inspection now,
+              plus a Re-Inspection after the builder claims all issues are fixed – at a special combined price.
+            </p>
+            <ul class="svc-main-list">
+              <li><i class="fa-solid fa-circle-check"></i> Full 400+ checkpoint Complete Property Inspection.</li>
+              <li><i class="fa-solid fa-circle-check"></i> Follow-up Re-Inspection to verify builder repairs.</li>
+              <li><i class="fa-solid fa-circle-check"></i> Before/after evidence that supports your escalation.</li>
+              <li><i class="fa-solid fa-circle-check"></i> Saves approx. ₹2,000–₹3,000 compared to separate bookings.</li>
+              <li><i class="fa-solid fa-circle-check"></i> Recommended for all new handovers and possession cases.</li>
+            </ul>
+            <p class="svc-main-note">
+              Best for: Buyers who want <strong>zero surprises</strong> after moving in and prefer a “plan it once”
+              approach.
+            </p>
+            <div class="mt-3 d-flex flex-wrap gap-2">
+              <a href="contact.html" class="btn btn-primary-soft btn-sm">Book Combo Package</a>
+              <a href="calcu &amp; pricing.html" class="btn btn-outline-accent btn-sm">Check combo pricing</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6️⃣ NEW SERVICE 4 – ADVANCED DAMPNESS & LEAKAGE DETECTION -->
+    <section class="svc-main-alt svc-section" id="dampness-service">
+      <div class="container">
+        <div class="row g-5 align-items-center flex-lg-row-reverse">
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="svc-main-img-wrapper">
+              <img src="img/damp.jpg" alt="Advanced Dampness & Leakage Detection" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="svc-label">Service 04</div>
+            <h2 class="svc-title">Advanced Dampness &amp; Leakage Detection</h2>
+            <p class="svc-main-tagline">
+              Using FLIR Thermal Camera + Professional Moisture Meter for deeper diagnosis.
+            </p>
+            <p class="svc-subtitle text-start">
+              When that “one patch” keeps coming back after repainting, a surface-level inspection is not enough. This
+              focused visit uses tools and experience to understand where moisture is really coming from.
+            </p>
+            <ul class="svc-main-list">
+              <li><i class="fa-solid fa-circle-check"></i> Professional thermal imaging camera to identify hidden damp patterns.</li>
+              <li><i class="fa-solid fa-circle-check"></i> Digital moisture meter readings to map severity across walls, floors &amp; ceilings.</li>
+              <li><i class="fa-solid fa-circle-check"></i> Probable source mapping – bathrooms, balconies, terraces, neighbour flats etc.</li>
+              <li><i class="fa-solid fa-circle-check"></i> Thermal + visual photo documentation with observations in simple language.</li>
+              <li><i class="fa-solid fa-circle-check"></i> Practical recommendations your waterproofing or civil team can actually implement.</li>
+            </ul>
+            <p class="svc-main-note">
+              Perfect for: Homes with recurring damp patches, bubbling paint, mould growth or unexplained musty odours.
+            </p>
+            <div class="mt-3 d-flex flex-wrap gap-2">
+              <a href="contact.html" class="btn btn-primary-soft btn-sm">Fix my dampness issue</a>
+              <a href="calcu &amp; pricing.html" class="btn btn-outline-accent btn-sm">Add to my inspection</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7️⃣ WHAT WE CHECK – CATEGORY-WISE (APPLIES TO ALL SERVICES) -->
+    <section class="svc-coverage svc-section">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5" data-aos="fade-right">
+            <div class="svc-label">Checklist pillars</div>
+            <h2 class="svc-title">One methodology, used across all services.</h2>
+            <p class="svc-subtitle text-start">
+              Whether it’s the first inspection, a re-inspection or a focused dampness visit, we follow a structured
+              approach so no corner is casually skipped.
+            </p>
+          </div>
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="svc-coverage-block">
+                  <div class="svc-coverage-title">
+                    <i class="fa-solid fa-ruler-combined"></i> Civil &amp; finishing
+                  </div>
+                  <p class="svc-coverage-text">
+                    Tiles, hollowness, slopes, cracks, plaster, joints, skirting and paint finish across all rooms.
+                  </p>
+                </div>
+                <div class="svc-coverage-block">
+                  <div class="svc-coverage-title">
+                    <i class="fa-solid fa-faucet-drip"></i> Plumbing &amp; bathrooms
+                  </div>
+                  <p class="svc-coverage-text">
+                    Flow, pressure, leak marks, drain slopes, fixtures, loose fittings and basic traps.
+                  </p>
+                </div>
+                <div class="svc-coverage-block">
+                  <div class="svc-coverage-title">
+                    <i class="fa-solid fa-wind"></i> Ventilation &amp; comfort
+                  </div>
+                  <p class="svc-coverage-text">
+                    Window openings, exhausts, natural light, cross-ventilation possibilities and liveability notes.
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="svc-coverage-block">
+                  <div class="svc-coverage-title">
+                    <i class="fa-solid fa-bolt"></i> Electrical &amp; DB
+                  </div>
+                  <p class="svc-coverage-text">
+                    DB layout, basic MCB grouping, earthing indications, switch/socket behaviour and load readiness.
+                  </p>
+                </div>
+                <div class="svc-coverage-block">
+                  <div class="svc-coverage-title">
+                    <i class="fa-solid fa-door-closed"></i> Doors &amp; windows
+                  </div>
+                  <p class="svc-coverage-text">
+                    Alignment, operation, gaps, locks, hinges, stoppers and weather strip behaviour.
+                  </p>
+                </div>
+                <div class="svc-coverage-block">
+                  <div class="svc-coverage-title">
+                    <i class="fa-solid fa-house-circle-check"></i> Overall safety &amp; usage
+                  </div>
+                  <p class="svc-coverage-text">
+                    Balcony &amp; railing checks, kid/elder safety, slip-prone zones and everyday practicality.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8️⃣ REAL-WORLD SCENARIOS – PARALLAX STRIP -->
+    <section class="svc-scenarios svc-section">
+      <div class="svc-scenarios-bg parallax-bg" data-parallax="0.22"></div>
+      <div class="container svc-scenarios-inner">
+        <div class="row mb-4">
+          <div class="col-lg-7" data-aos="fade-right">
+            <div class="svc-label text-white-50">Real inspection scenarios</div>
+            <h2 class="svc-title text-white">When these services matter the most.</h2>
+            <p class="svc-subtitle text-white-50">
+              The right combination of Complete Inspection, Re-Inspection, Combo and Dampness Diagnosis gives you
+              leverage at exactly the right time in your home journey.
+            </p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-up">
+            <div class="svc-scenario-card">
+              <div class="svc-scenario-label">Case 01 · New tower</div>
+              <div class="svc-scenario-title">Before signing possession</div>
+              <p class="svc-scenario-text">
+                Complete Inspection creates a detailed snag list. Re-Inspection or the Combo Package ensures those
+                snags are genuinely fixed before you sign possession documents.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+            <div class="svc-scenario-card">
+              <div class="svc-scenario-label">Case 02 · Persistent dampness</div>
+              <div class="svc-scenario-title">That one patch keeps returning</div>
+              <p class="svc-scenario-text">
+                Advanced Dampness &amp; Leakage Detection uses moisture tools and patterns to understand why repainting
+                isn’t solving the real problem.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="140">
+            <div class="svc-scenario-card">
+              <div class="svc-scenario-label">Case 03 · NRI buyers</div>
+              <div class="svc-scenario-title">You can’t visit twice</div>
+              <p class="svc-scenario-text">
+                Use Complete Inspection during your short visit, and schedule Re-Inspection (or Combo) when builder
+                claims closure – even if you’re back abroad by then.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9️⃣ ON THE DAY OF INSPECTION – NEW DESIGN -->
+    <section class="svc-day svc-section">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-5" data-aos="fade-right">
+            <div class="svc-label">On the day of inspection</div>
+            <h2 class="svc-title">What actually happens during a Trinetra visit.</h2>
+            <p class="svc-subtitle text-start">
+              The flow stays consistent whether it’s a first inspection or a re-inspection – only the focus of
+              observations changes.
+            </p>
+          </div>
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="svc-day-steps">
+              <div class="svc-day-card">
+                <div class="svc-day-icon">
+                  <i class="fa-solid fa-person-walking"></i>
+                </div>
+                <div class="svc-day-step">Step 01</div>
+                <div class="svc-day-title">Arrival &amp; context</div>
+                <p class="svc-day-text">
+                  Our engineer arrives at site, understands your concerns and clarifies whether this is a Complete
+                  Inspection, Re-Inspection or a focused dampness visit.
+                </p>
+              </div>
+              <div class="svc-day-card">
+                <div class="svc-day-icon">
+                  <i class="fa-solid fa-door-open"></i>
+                </div>
+                <div class="svc-day-step">Step 02</div>
+                <div class="svc-day-title">Room-wise checks</div>
+                <p class="svc-day-text">
+                  We move systematically through each room checking civil, plumbing, electrical, dampness and safety
+                  aspects.
+                </p>
+              </div>
+              <div class="svc-day-card">
+                <div class="svc-day-icon">
+                  <i class="fa-solid fa-comments"></i>
+                </div>
+                <div class="svc-day-step">Step 03</div>
+                <div class="svc-day-title">On-site summary</div>
+                <p class="svc-day-text">
+                  Before leaving, we verbally summarise key findings so you already know what went well and what didn’t.
+                </p>
+              </div>
+              <div class="svc-day-card">
+                <div class="svc-day-icon">
+                  <i class="fa-solid fa-file-circle-check"></i>
+                </div>
+                <div class="svc-day-step">Step 04</div>
+                <div class="svc-day-title">Report &amp; follow-up</div>
+                <p class="svc-day-text">
+                  You receive a digital report within the committed timeline, plus clarification support over call when
+                  you speak with the builder or society.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🔟 TOOLS & TECH -->
+    <section class="svc-tools svc-section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <div class="svc-label">Tools &amp; methodology</div>
+          <h2 class="svc-title">More than a quick “walk-through”.</h2>
+          <p class="svc-subtitle">
+            We combine practical site experience with non-destructive tools, so every service gives you deeper clarity.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-up">
+            <div class="svc-tools-card">
+              <div class="svc-tools-title"><i class="fa-solid fa-thermometer me-1"></i> Dampness &amp; seepage checks</div>
+              <p class="svc-tools-text">
+                Moisture meters and visual pattern analysis help us identify active and potential seepage zones early.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+            <div class="svc-tools-card">
+              <div class="svc-tools-title"><i class="fa-solid fa-vector-square me-1"></i> Alignment &amp; slope tools</div>
+              <p class="svc-tools-text">
+                Basic levelling tools and tested methods help flag uneven floors, wrong slopes and misaligned elements
+                quickly.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="140">
+            <div class="svc-tools-card">
+              <div class="svc-tools-title"><i class="fa-solid fa-file-circle-check me-1"></i> Structured documentation</div>
+              <p class="svc-tools-text">
+                All services result in structured, photo-backed reports that support you in conversations with your
+                builder or contractor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1️⃣1️⃣ WHO WE HELP -->
+    <section class="svc-personas svc-section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <div class="svc-label">Who is it for?</div>
+          <h2 class="svc-title">Trinetra is built for real-world buyers, not just checklists.</h2>
+          <p class="svc-subtitle">
+            Whether you’re buying your first home, investing, or coordinating from abroad – the goal stays the same:
+            clarity and confidence.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3" data-aos="fade-up">
+            <div class="svc-persona-card">
+              <div class="svc-persona-tag">First home buyers</div>
+              <div class="svc-persona-title">Buying your first flat</div>
+              <p class="svc-persona-text">
+                Get a clear, jargon-free list of issues so you can confidently discuss rectifications with your builder.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="80">
+            <div class="svc-persona-card">
+              <div class="svc-persona-tag">NRI buyers</div>
+              <div class="svc-persona-title">Owning from abroad</div>
+              <p class="svc-persona-text">
+                Detailed photos and structured reporting help you stay in control even if you can’t visit frequently.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="140">
+            <div class="svc-persona-card">
+              <div class="svc-persona-tag">Investors</div>
+              <div class="svc-persona-title">Rental &amp; resale focus</div>
+              <p class="svc-persona-text">
+                Understand repair costs and potential issues before locking in your investment or rental commitments.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="svc-persona-card">
+              <div class="svc-persona-tag">Families</div>
+              <div class="svc-persona-title">Moving in with kids / parents</div>
+              <p class="svc-persona-text">
+                Safety and day-to-day usability observations become part of your decision – not an afterthought.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1️⃣2️⃣ FINAL CTA -->
+    <section class="svc-final-cta">
+      <div class="container">
+        <h2 data-aos="fade-up">Ready to choose the right combination of services?</h2>
+        <p data-aos="fade-up" data-aos-delay="70">
+          Share a few details about your flat, project and current stage. We’ll suggest how to best use Complete
+          Inspection, Re-Inspection, Combo Package and Dampness Diagnosis so you can sign possession with confidence.
+        </p>
+        <a href="contact.html" class="btn-solid" data-aos="fade-up" data-aos-delay="120">
+          Get a quick recommendation →
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/919876543210?text=Hi! I want to book property inspection" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row gy-5 text-md-start">
+        <div class="col-lg-5">
+          <div class="footer-logo mb-4 text-center text-lg-start">
+            <img src="img/Red and Black Modern Home Logo.png" alt="Trinetra">
+          </div>
+          <h3 class="h4 fw-bold text-center text-lg-start">Trinetra Property Inspection</h3>
+          <p class="mt-3 text-light opacity-90 text-center text-lg-start">
+            Professional and detailed property inspection services across Hyderabad.
+          </p>
+        </div>
+
+      
+         <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="services.html">Our Services</a>
+                        <a href="calcu & pricing.html">Calculation &amp; Pricing</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                </div>
+
+        <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-heading">Contact Us</h5>
+                    <div class="contact-info">
+                        <p class="mb-3"><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p class="mb-3"><i class="fas fa-phone"></i> +91 87654 32109</p>
+                        <p class="mb-3"><i class="fas fa-envelope"></i> info@trinetraproperty.in</p>
+                        <p class="mb-4"><i class="fas fa-map-marker-alt"></i>Hyderabad</p>
+                    </div>
+                    <div class="text-center text-lg-start">
+                        <a href="tel:+919876543210" class="book-btn mt-3">
+                            <i class="fas fa-phone">
+                            </i> Call 
+                        </a>
+                    </div>
+                </div>
+            </div>
+ <!-- Social Media Icons - Left Side (Updated for FA6) -->
+<div class="social-links-wrapper mt-4 text-center text-lg-start">
+    <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener" class="social-icon-link me-4" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f" style="font-size: 1.5rem; color: var(--accent);"></i>
+    </a>
+    <a href="https://twitter.com/yourpage" target="_blank" rel="noopener" class="social-icon-link me-4" aria-label="Twitter">
+        <i class="fa-brands fa-twitter" style="font-size: 1.5rem; color: var(--accent);"></i>
+    </a>
+    <a href="https://www.linkedin.com/company/yourpage" target="_blank" rel="noopener" class="social-icon-link me-4" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in" style="font-size: 1.5rem; color: var(--accent);"></i>
+    </a>
+</div>
+
+      <div class="footer-bottom text-center">
+        © 2025 Trinetra Property Inspection. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+<div id="trinetra-loader">
+    <div class="loader-center">
+        <div class="loader-ring"></div>
+        <img src="img/Red and Black Modern Home Logo (1).png" class="loader-logo">
+    </div>
+</div>
+  <!-- JS -->
+   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    const nav = document.querySelector('.custom-nav');
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY || window.pageYOffset;
+      if (!nav) return;
+      nav.classList.toggle('scrolled', scrollY > 50);
+    });
+
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-quart',
+      once: true
+    });
+
+    // Light parallax for scenarios strip
+    const parallaxEls = document.querySelectorAll('.parallax-bg');
+
+    function handleParallax() {
+      const width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 768) {
+        parallaxEls.forEach(el => (el.style.transform = 'translateY(0)'));
+        return;
+      }
+
+      parallaxEls.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const speedAttr = parseFloat(el.getAttribute('data-parallax')) || 0.2;
+        const offset = rect.top * speedAttr * -0.4;
+        el.style.transform = `translateY(${offset}px) scale(1.03)`;
+      });
+    }
+
+    window.addEventListener('scroll', handleParallax);
+    window.addEventListener('load', handleParallax);
+    window.addEventListener('resize', handleParallax);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trinetra Property Inspection</title>
+
+    <!-- Google Font: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- In your <head> -->
+    <link rel="icon" type="image/png" href="img/icon.png">
+
+
+
+
+
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-nav">
+        <div class="container-fluid px-3 px-lg-4">
+
+            <!-- LOGO -->
+            <a class="navbar-brand" href="#hero">
+                <img src="img/Red and Black Modern Home Logo (1).png" alt="Trinetra" height="120">
+            </a>
+
+            <!-- TOGGLER -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- MENU -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-lg-auto gap-lg-4 gap-3 text-center">
+                    <li class="nav-item"><a class="nav-link  active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="calcu &amp; pricing.html">Calculation &amp;
+                            Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                </ul>
+
+                <!-- PHONE -->
+                <div class="nav-phone d-none d-lg-block">
+                    <a href="tel:+919876543210">
+                        <i class="fa-solid fa-phone"></i> +91 98765 43210
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO -->
+        <section id="hero" class="hero-section ">
+            <div class="hero-bg parallax-bg" data-parallax="0.25"></div>
+            <div class="hero-overlay"></div>
+
+            <div class="container position-relative hero-content">
+                <div class="row align-items-center">
+                    <div class="col-lg-7" data-aos="fade-right">
+                        <div class="hero-tag">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            Detailed Home Inspection
+                        </div>
+                        <h1 class="hero-title">
+                            Get your <span>new home</span> professionally checked before you move in.
+                        </h1>
+                        <p class="hero-subtitle">
+                            We inspect every corner of your property – structure, seepage, plumbing, electrical,
+                            finishing and safety –
+                            so you can move in with complete peace of mind.
+                        </p>
+
+                        <div class="hero-badges">
+                            <div class="hero-badge">
+                                <i class="fa-solid fa-location-dot"></i> Hyderabad &amp; Nearby Areas
+                            </div>
+                            <div class="hero-badge">
+                                <i class="fa-solid fa-file-circle-check"></i> Same-Day Digital Report*
+                            </div>
+                            <div class="hero-badge">
+                                <i class="fa-solid fa-user-tie"></i> Engineer-Led Inspection
+                            </div>
+                        </div>
+
+                        <div class="hero-cta">
+                            <a href="tel:+919876543210" class="btn btn-primary-soft">
+                                <i class="fa-solid fa-phone me-2"></i> Call &amp; Book Inspection
+                            </a>
+                            <a href="#services" class="btn btn-outline-accent">
+                                View Inspection Services
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 mt-4 mt-lg-0" data-aos="fade-left">
+
+                        <div id="heroSnapshotCarousel" class="carousel slide" data-bs-ride="carousel"
+                            data-bs-interval="2000">
+                            <div class="carousel-inner">
+
+                                <!-- ================= SLIDE 1 (ORIGINAL) ================= -->
+                                <div class="carousel-item active">
+                                    <div class="hero-right-card shadow-soft p-4" style="height:100%;">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <p class="mb-0 text-uppercase text-muted small-letter">Snapshot</p>
+                                            <span class="badge-soft">What we cover</span>
+                                        </div>
+
+                                        <h5 class="mb-3 fw-bold">Complete health check of your new home.</h5>
+
+                                        <div class="hero-stat mb-3">
+                                            <div class="hero-stat-icon">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Detailed civil & finishing checks</strong>
+                                                <p class="mb-0 text-muted small-text">
+                                                    Flooring, tiles, walls, ceilings, doors, windows, slopes and
+                                                    alignment.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="hero-stat mb-3">
+                                            <div class="hero-stat-icon">
+                                                <i class="fa-solid fa-plug-circle-bolt"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Electrical, plumbing & safety</strong>
+                                                <p class="mb-0 text-muted small-text">
+                                                    DB, sockets, switches, water flow, leakages, basic safety &
+                                                    ventilation.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="hero-metrics">
+                                            <div class="hero-metric">
+                                                <div class="hero-metric-number">
+                                                    <span class="counter" data-target="400">400</span>+
+                                                </div>
+                                                <div class="hero-metric-label">Quality checkpoints covered</div>
+                                            </div>
+                                        </div>
+
+                                        <p class="mt-2 mb-0 text-muted note-text">
+                                            *Timeline and coverage may vary based on property size and package.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- ================= SLIDE 2 ================= -->
+                                <div class="carousel-item">
+                                    <div class="hero-right-card shadow-soft p-4" style="height:100%;">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <p class="mb-0 text-uppercase text-muted small-letter">Snapshot</p>
+                                            <span class="badge-soft">Structural Checks</span>
+                                        </div>
+
+                                        <h5 class="mb-3 fw-bold">We make sure your home is structurally safe.</h5>
+
+                                        <div class="hero-stat mb-3">
+                                            <div class="hero-stat-icon">
+                                                <i class="fa-solid fa-building"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Cracks, alignment & stability</strong>
+                                                <p class="mb-0 text-muted small-text">
+                                                    Detect cracks on walls, beams, columns & evaluate structural
+                                                    strength.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="hero-stat mb-3">
+                                            <div class="hero-stat-icon">
+                                                <i class="fa-solid fa-droplet"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Dampness & moisture scanning</strong>
+                                                <p class="mb-0 text-muted small-text">
+                                                    Identify seepage, damp patches, moisture issues using digital tools.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="hero-stat mb-3">
+                                            <div class="hero-stat-icon">
+                                                <i class="fa-solid fa-temperature-half"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Thermal & ventilation checks</strong>
+                                                <p class="mb-0 text-muted small-text">
+                                                    Ensure airflow, heat spots & ventilation are adequate for comfort.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <p class="mt-2 mb-0 text-muted note-text">
+                                            Structural issues are the most costly — early detection = huge savings.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- ================= SLIDE 3 ================= -->
+                                <div class="carousel-item">
+                                    <div class="hero-right-card shadow-soft p-4" style="height:100%;">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <p class="mb-0 text-uppercase text-muted small-letter">Snapshot</p>
+                                            <span class="badge-soft">Digital Report</span>
+                                        </div>
+
+                                        <h5 class="mb-3 fw-bold">You receive a visual, easy-to-understand report.</h5>
+
+                                        <div class="hero-stat mb-3">
+                                            <div class="hero-stat-icon">
+                                                <i class="fa-solid fa-file-lines"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Photo-tagged inspection report</strong>
+                                                <p class="mb-0 text-muted small-text">
+                                                    Every issue is photographed with severity level & recommended fix.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="hero-stat mb-3">
+                                            <div class="hero-stat-icon">
+                                                <i class="fa-solid fa-screwdriver-wrench"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Fixing guidance</strong>
+                                                <p class="mb-0 text-muted small-text">
+                                                    We guide your team on repairs & recheck once completed.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="hero-stat mb-3">
+                                            <div class="hero-stat-icon">
+                                                <i class="fa-solid fa-check-circle"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Move-in readiness</strong>
+                                                <p class="mb-0 text-muted small-text">
+                                                    Ensuring your home becomes fully ready for comfortable living.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <p class="mt-2 mb-0 text-muted note-text">
+                                            You get a complete digital report PDF on the same day.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- OVERVIEW / ABOUT -->
+        <section id="overview" class="overview-section section-padding">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <span class="badge-soft mb-3">About Trinetra</span>
+                        <h2 class="section-title">Independent home inspection for stress-free handover.</h2>
+                        <p class="mb-3 text-muted">
+                            Trinetra Property Inspection is your technology-enabled, unbiased inspection partner. We
+                            help homebuyers
+                            identify hidden issues before taking possession so you can hold your builder accountable.
+                        </p>
+                        <p class="mb-4 text-muted">
+                            Our engineers, advanced tools and structured checklist ensure that no damp patch, hollow
+                            tile or loose
+                            wiring goes unnoticed.
+                        </p>
+
+                        <ul class="list-unstyled overview-checklist">
+                            <li><i class="fa-solid fa-circle-check"></i> Civil, finishing, plumbing &amp; electrical
+                                checks under one roof.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Non-destructive tools used wherever required.
+                            </li>
+                            <li><i class="fa-solid fa-circle-check"></i> Issues tagged as Minor / Major / Critical for
+                                clarity.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Support in explaining issues to
+                                builder/maintenance teams.</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="stat-card shadow-soft">
+                                    <div class="stat-number">
+                                        <span class="counter" data-target="5000">0</span>+
+                                    </div>
+                                    <div class="stat-label">Homes Inspected*</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="stat-card shadow-soft">
+                                    <div class="stat-number">25+</div>
+                                    <div class="stat-label">Check Categories</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="stat-card shadow-soft">
+                                    <div class="stat-number">4.9★</div>
+                                    <div class="stat-label">Average Rating</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="stat-card shadow-soft">
+                                    <div class="stat-number">90%</div>
+                                    <div class="stat-label">Issues Fixed Before Move-in</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="services-section section-padding">
+            <div class="services-bg parallax-bg" data-parallax="0.12"></div>
+            <div class="container position-relative">
+                <div class="text-center mb-5">
+                    <span class="badge-soft mb-3">Inspection Services</span>
+                    <h2 class="section-title">Choose a property inspection that fits your need.</h2>
+                    <p class="section-subtitle">
+                        From new handover flats to resale purchases and targeted damp checks, Trinetra offers tailored
+                        inspection packages.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Service 1 -->
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in-up">
+                        <div class="service-card shadow-soft">
+                            <div>
+                                <div class="service-card-icon">
+                                    <i class="fa-solid fa-key"></i>
+                                </div>
+                                <h5>Pre-Handover Home Inspection</h5>
+                                <p>Ideal for brand new flats before taking keys from builder. We verify construction
+                                    quality and finishing in detail.</p>
+                            </div>
+                            <div class="service-card-footer">
+                                <span><i class="fa-regular fa-clock me-1"></i> 3–4 hours</span>
+                                <a href="#" class="btn-learn-more">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in-up" data-aos-delay="100">
+                        <div class="service-card shadow-soft">
+                            <div>
+                                <div class="service-card-icon">
+                                    <i class="fa-solid fa-house-circle-check"></i>
+                                </div>
+                                <h5>Ready-to-Move / Pre-Delivery Inspection</h5>
+                                <p>For already completed homes where possession is due. We highlight snags before you
+                                    sign handover documents.</p>
+                            </div>
+                            <div class="service-card-footer">
+                                <span><i class="fa-regular fa-file-lines me-1"></i> Detailed snag list</span>
+                                <a href="" class="btn-learn-more">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in-up" data-aos-delay="200">
+                        <div class="service-card shadow-soft">
+                            <div>
+                                <div class="service-card-icon">
+                                    <i class="fa-solid fa-building-circle-check"></i>
+                                </div>
+                                <h5>Resale Property Inspection</h5>
+                                <p>For pre-owned flats and villas. We identify age-related issues, leakages and safety
+                                    risks before you buy.</p>
+                            </div>
+                            <div class="service-card-footer">
+                                <span><i class="fa-solid fa-stethoscope me-1"></i> Property health check</span>
+                                <a href="" class="btn-learn-more">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in-up">
+                        <div class="service-card shadow-soft">
+                            <div>
+                                <div class="service-card-icon">
+                                    <i class="fa-solid fa-droplet"></i>
+                                </div>
+                                <h5>Leakage & Dampness Check</h5>
+                                <p>Targeted inspection using moisture meters and thermal tools to locate seepage sources
+                                    before damage spreads.</p>
+                            </div>
+                            <div class="service-card-footer">
+                                <span><i class="fa-solid fa-droplet-slash me-1"></i> Focus on moisture</span>
+                                <a href="" class="btn-learn-more">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in-up" data-aos-delay="100">
+                        <div class="service-card shadow-soft">
+                            <div>
+                                <div class="service-card-icon">
+                                    <i class="fa-solid fa-plug-circle-bolt"></i>
+                                </div>
+                                <h5>Electrical &amp; Safety Audit</h5>
+                                <p>Checks on DB, wiring, earthing, MCB selection and overall electrical safety for peace
+                                    of mind.</p>
+                            </div>
+                            <div class="service-card-footer">
+                                <span><i class="fa-solid fa-bolt-lightning me-1"></i> Risk reduction</span>
+                                <a href="service-details.html" class="btn-learn-more">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section class="process-section section-padding">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="badge-soft mb-3">How it works</span>
+                    <h2 class="section-title">From booking to detailed report in 4 simple steps.</h2>
+                    <p class="section-subtitle">
+                        Our process is transparent, structured and designed to keep you informed at every step.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                        <div class="step-card shadow-soft h-100">
+                            <span class="step-number">01</span>
+                            <h6 class="step-title">Book Your Slot</h6>
+                            <p class="step-text">Call us or fill the contact form with your flat details and preferred
+                                date.</p>
+                            <div class="process-connector"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-card shadow-soft h-100">
+                            <span class="step-number">02</span>
+                            <h6 class="step-title">On-Site Inspection</h6>
+                            <p class="step-text">Our engineer visits your property with tools and executes the full
+                                checklist.</p>
+                            <div class="process-connector"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step-card shadow-soft h-100">
+                            <span class="step-number">03</span>
+                            <h6 class="step-title">Digital Report</h6>
+                            <p class="step-text">You receive a structured PDF report with photos, issue severity and
+                                remarks.</p>
+                            <div class="process-connector"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step-card step-last shadow-soft h-100">
+                            <span class="step-number">04</span>
+                            <h6 class="step-title">Re-Inspection Support</h6>
+                            <p class="step-text">Once issues are rectified, we can revisit (where applicable) to confirm
+                                closure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY TRINETRA (PARALLAX) -->
+        <section class="why-section section-padding">
+            <div class="why-bg parallax-bg" data-parallax="0.2"></div>
+            <div class="why-overlay"></div>
+
+            <div class="container why-content">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-5" data-aos="fade-right">
+                        <span class="badge-soft mb-3" style="color: wheat;">Why Choose Us</span>
+                        <h2 class="section-title py-2">Engineers, not brokers. Tools, not guesswork.</h2>
+                        <p class="mb-4 text-light">
+                            We are an independent inspection team focused only on your property’s health – with no link
+                            to builders or brokers.
+                        </p>
+                        <ul class="list-unstyled text-light small-text">
+                            <li class="mb-2"><i class="fa-solid fa-check-circle me-2 text-accent"></i> Inspectors with
+                                civil / electrical backgrounds.</li>
+                            <li class="mb-2"><i class="fa-solid fa-check-circle me-2 text-accent"></i> Moisture meters,
+                                laser levels, alignment tools used.</li>
+                            <li class="mb-2"><i class="fa-solid fa-check-circle me-2 text-accent"></i> Fully documented
+                                observations you can easily share.</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <div class="row g-3">
+                            <div class="col-md-4 col-6">
+                                <div class="why-card">
+                                    <i class="fa-solid fa-ruler-combined"></i>
+                                    <h6>Detailed Checklists</h6>
+                                    <p>Room-wise, item-wise inspection with no shortcuts.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="why-card">
+                                    <i class="fa-solid fa-camera-retro"></i>
+                                    <h6>Photo Documentation</h6>
+                                    <p>Marked images for every key issue observed.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="why-card">
+                                    <i class="fa-solid fa-scale-balanced"></i>
+                                    <h6>Unbiased Reports</h6>
+                                    <p>We work only for the buyer, not for any builder.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="why-card">
+                                    <i class="fa-solid fa-bolt"></i>
+                                    <h6>Tool-based Testing</h6>
+                                    <p>Moisture, slope, hollow tiles checked with tools.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="why-card">
+                                    <i class="fa-solid fa-headset"></i>
+                                    <h6>Post-Visit Support</h6>
+                                    <p>Clarifications &amp; help while talking to builder.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="why-card">
+                                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                                    <h6>Value for Money</h6>
+                                    <p>Prevent costly repairs by fixing issues early.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUSTED PARTNERS -->
+        <section class="partners-section section-padding">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <span class="badge-soft mb-3">Our Trusted Partners</span>
+                    <h2 class="section-title py-2">Trusted by leading builders &amp; communities.</h2>
+                    <p class="section-subtitle">
+                        Showcase logos of builders, societies and communities you work with here.
+                    </p>
+                </div>
+
+                <div class="partners-slider" data-aos="fade-up">
+                    <div class="partners-track">
+                        <div class="partner-logo"><img src="img/logo1.png" alt="Partner 1"></div>
+                        <div class="partner-logo"><img src="img/logo2.png" alt="Partner 2"></div>
+                        <div class="partner-logo"><img src="img/logo3.png" alt="Partner 3"></div>
+                        <div class="partner-logo"><img src="img/logo4.png" alt="Partner 4"></div>
+                        <div class="partner-logo"><img src="img/logo5.png" alt="Partner 5"></div>
+
+                        <div class="partner-logo"><img src="img/logo6.png" alt="Partner 1"></div>
+                        <div class="partner-logo"><img src="img/logo7.png" alt="Partner 2"></div>
+                        <div class="partner-logo"><img src="img/logo8.png" alt="Partner 3"></div>
+                        <div class="partner-logo"><img src="img/logo5.png" alt="Partner 4"></div>
+                        <div class="partner-logo"><img src="img/logo4.png" alt="Partner 5"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REVIEWS -->
+        <section class="reviews-section section-padding">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="badge-soft mb-3">Customer Stories</span>
+                    <h2 class="section-title">Homeowners across Hyderabad trust Trinetra.</h2>
+                    <p class="section-subtitle">
+                        Here’s what some of our customers say after getting their homes inspected.
+                    </p>
+                </div>
+
+                <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="7000">
+                    <div class="carousel-inner">
+
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="container">
+                                <div class="row g-4">
+                                    <div class="col-lg-6">
+                                        <div class="review-card shadow-soft">
+                                            <div class="review-stars">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <p class="review-text">
+                                                “We thought our flat was perfect. Trinetra identified seepage, hollow
+                                                tiles and electrical issues
+                                                we would have never seen. The builder fixed all of it before
+                                                possession.”
+                                            </p>
+                                            <p class="mb-0 review-name">Kiran &amp; Swathi</p>
+                                            <p class="review-meta">2 BHK, Gachibowli</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="review-card shadow-soft">
+                                            <div class="review-stars">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star-half-stroke"></i>
+                                            </div>
+                                            <p class="review-text">
+                                                “The report was extremely professional and clear. We simply sent it to
+                                                the builder and they had a
+                                                ready task list of rectifications.”
+                                            </p>
+                                            <p class="mb-0 review-name">Rahul Jain</p>
+                                            <p class="review-meta">3 BHK, Kondapur</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row g-4">
+                                    <div class="col-lg-6">
+                                        <div class="review-card shadow-soft">
+                                            <div class="review-stars">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <p class="review-text">
+                                                “Worth every rupee. We booked the inspection for our parents’ house and
+                                                avoided long arguments
+                                                with the builder later.”
+                                            </p>
+                                            <p class="mb-0 review-name">Nazia &amp; Family</p>
+                                            <p class="review-meta">Independent House, Manikonda</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="review-card shadow-soft">
+                                            <div class="review-stars">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <p class="review-text">
+                                                “They used proper tools, explained every observation on-site, and
+                                                patiently clarified all our
+                                                doubts. Very professional team.”
+                                            </p>
+                                            <p class="mb-0 review-name">Suresh &amp; Kavya</p>
+                                            <p class="review-meta">3 BHK, Miyapur</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row g-4">
+                                    <div class="col-lg-6">
+                                        <div class="review-card shadow-soft">
+                                            <div class="review-stars">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star-half-stroke"></i>
+                                            </div>
+                                            <p class="review-text">
+                                                “We live abroad, so Trinetra inspected the flat and shared a detailed
+                                                report. It helped us take
+                                                decisions without travelling.”
+                                            </p>
+                                            <p class="mb-0 review-name">Anita</p>
+                                            <p class="review-meta">NRI Buyer, HITECH City</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="review-card shadow-soft">
+                                            <div class="review-stars">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <p class="review-text">
+                                                “Their inspection report became our checklist with the builder.
+                                                Everything was fixed before we
+                                                moved in with kids and parents.”
+                                            </p>
+                                            <p class="mb-0 review-name">Vikram &amp; Family</p>
+                                            <p class="review-meta">4 BHK, Kukatpally</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICE AREAS -->
+        <section class="areas-section section-padding">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <span class="badge-soft mb-3">Service Coverage</span>
+                        <h2 class="section-title py-2">We inspect homes across Hyderabad &amp; nearby suburbs.</h2>
+                        <p class="text-muted mb-3">
+                            Trinetra covers major residential pockets, new townships and villa communities in and around
+                            Hyderabad.
+                        </p>
+                        <p class="text-muted mb-3">
+                            If your project is slightly outside city limits, just share the location – we’ll confirm
+                            feasibility and travel charges.
+                        </p>
+
+                        <div class="mt-3">
+                            <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Gachibowli</span>
+                            <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Kondapur</span>
+                            <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Miyapur</span>
+                            <span class="area-badge"><i class="fa-solid fa-location-dot"></i> HITEC City</span>
+                            <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Manikonda</span>
+                            <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Kukatpally</span>
+                            <span class="area-badge"><i class="fa-solid fa-location-dot"></i> LB Nagar</span>
+                            <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Uppal</span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="metric-card shadow-soft">
+                                    <div class="metric-number">50+</div>
+                                    <div class="metric-label">Projects Covered*</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="metric-card shadow-soft">
+                                    <div class="metric-number">98%</div>
+                                    <div class="metric-label">Clients Recommend Us</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="metric-card shadow-soft">
+                                    <div class="metric-number">24–48h</div>
+                                    <div class="metric-label">Report Turnaround Time</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="metric-card shadow-soft">
+                                    <div class="metric-number">2</div>
+                                    <div class="metric-label">Free Clarification Calls</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-3 mb-0 text-muted small-text">
+                            *All numbers and locations are placeholders – update as per your actual operations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPARISON SECTION -->
+        <section class="comparison-section section-padding">
+            <div class="comparison-bg parallax-bg" data-parallax="0.22"></div>
+            <div class="comparison-overlay"></div>
+
+            <div class="container comparison-inner">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="comparison-badge d-inline-block mb-3">Comparison</span>
+                    <h2 class="comparison-title">What you get with Trinetra vs a typical builder handover.</h2>
+                    <p class="comparison-subtitle mx-auto">
+                        Most builders do only a quick walk-through. Trinetra gives you a professional,
+                        tool-based audit &amp; a documented report that you can rely on.
+                    </p>
+                    <p class="comparison-note mx-auto">
+                        Use this table to clearly show your value to customers. You can tweak each point based on your
+                        specialisation.
+                    </p>
+                </div>
+
+                <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-11">
+                        <div class="table-responsive table-comparison">
+                            <table class="table table-bordered mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Checklist Item</th>
+                                        <th scope="col">Trinetra Inspection</th>
+                                        <th scope="col">Typical Builder / Others</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Room-wise, detailed checklist</td>
+                                        <td><span class="cmp-yes"><i class="fa-solid fa-circle-check cmp-icon"></i> Yes
+                                                – 400+ checkpoints</span></td>
+                                        <td><span class="cmp-no"><i class="fa-solid fa-circle-xmark cmp-icon"></i> Basic
+                                                visual check</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Use of tools (moisture meter, laser, etc.)</td>
+                                        <td><span class="cmp-yes"><i class="fa-solid fa-circle-check cmp-icon"></i> Yes
+                                                – tool-based testing</span></td>
+                                        <td><span class="cmp-no"><i class="fa-solid fa-circle-xmark cmp-icon"></i>
+                                                Rarely used</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Photographic report with marked issues</td>
+                                        <td><span class="cmp-yes"><i class="fa-solid fa-circle-check cmp-icon"></i>
+                                                Detailed PDF report</span></td>
+                                        <td><span class="cmp-no"><i class="fa-solid fa-circle-xmark cmp-icon"></i>
+                                                Verbal notes only</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Severity tagging (Minor / Major / Critical)</td>
+                                        <td><span class="cmp-yes"><i class="fa-solid fa-circle-check cmp-icon"></i>
+                                                Clearly tagged issues</span></td>
+                                        <td><span class="cmp-no"><i class="fa-solid fa-circle-xmark cmp-icon"></i> Not
+                                                provided</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Independence &amp; bias</td>
+                                        <td><span class="cmp-yes"><i class="fa-solid fa-circle-check cmp-icon"></i> 100%
+                                                unbiased</span></td>
+                                        <td><span class="cmp-no"><i class="fa-solid fa-circle-xmark cmp-icon"></i>
+                                                Linked to builder</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Support in explaining issues to builder</td>
+                                        <td><span class="cmp-yes"><i class="fa-solid fa-circle-check cmp-icon"></i> Yes
+                                                – after-report support</span></td>
+                                        <td><span class="cmp-no"><i class="fa-solid fa-circle-xmark cmp-icon"></i> Not
+                                                available</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Re-inspection after rectification</td>
+                                        <td><span class="cmp-yes"><i class="fa-solid fa-circle-check cmp-icon"></i>
+                                                Available in packages</span></td>
+                                        <td><span class="cmp-no"><i class="fa-solid fa-circle-xmark cmp-icon"></i>
+                                                Rarely offered</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Focus on long-term maintenance</td>
+                                        <td><span class="cmp-yes"><i class="fa-solid fa-circle-check cmp-icon"></i>
+                                                Preventive guidance</span></td>
+                                        <td><span class="cmp-no"><i class="fa-solid fa-circle-xmark cmp-icon"></i>
+                                                Short-term fixes</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="faq-section section-padding">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <span class="badge-soft mb-3">FAQ</span>
+                    <h2 class="section-title">What exactly do we check during inspection?</h2>
+                    <p class="section-subtitle">
+                        Explore detailed questions under each category – from dimensions to brand checks.
+                    </p>
+                </div>
+
+                <div class="faq-filters" data-aos="fade-up">
+                    <button class="faq-filter-btn active" data-filter="all">All</button>
+                    <button class="faq-filter-btn" data-filter="dimension">Dimension Check</button>
+                    <button class="faq-filter-btn" data-filter="quality">Quality Check</button>
+                    <button class="faq-filter-btn" data-filter="tiles">Tiles Check</button>
+                    <button class="faq-filter-btn" data-filter="plumbing">Plumbing Check</button>
+                    <button class="faq-filter-btn" data-filter="ceiling">Ceiling Check</button>
+                    <button class="faq-filter-btn" data-filter="walls">Walls Check</button>
+                    <button class="faq-filter-btn" data-filter="electrical">Electrical Check</button>
+                    <button class="faq-filter-btn" data-filter="doorswindows">Doors &amp; Windows</button>
+                    <button class="faq-filter-btn" data-filter="floor">Floor Check</button>
+                    <button class="faq-filter-btn" data-filter="living">Living Condition Area</button>
+                    <button class="faq-filter-btn" data-filter="carpet">Carpet Area</button>
+                    <button class="faq-filter-btn" data-filter="dampness">Dampness</button>
+                    <button class="faq-filter-btn" data-filter="material">Material Check</button>
+                    <button class="faq-filter-btn" data-filter="brand">Brand Check</button>
+                </div>
+
+                <div class="accordion" id="faqAccordion" data-aos="fade-up" data-aos-delay="100">
+
+                    <!-- DIMENSION CHECK (2) -->
+                    <div class="accordion-item" data-category="dimension">
+                        <h2 class="accordion-header" id="dim1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#dim1c" aria-expanded="true" aria-controls="dim1c">
+                                What do you check under Dimension Check?
+                            </button>
+                        </h2>
+                        <div id="dim1c" class="accordion-collapse collapse show" aria-labelledby="dim1"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We compare room sizes, wall-to-wall distances, door heights and window dimensions with
+                                the approved
+                                floor plan. This helps identify any major deviations that can impact usage or furniture
+                                placement.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-category="dimension">
+                        <h2 class="accordion-header" id="dim2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#dim2c" aria-expanded="false" aria-controls="dim2c">
+                                Do you verify carpet area vs promised area?
+                            </button>
+                        </h2>
+                        <div id="dim2c" class="accordion-collapse collapse" aria-labelledby="dim2"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We perform sample measurements of key rooms to check if the usable space broadly matches
+                                what is
+                                mentioned in the plan. For exact legal verification, you should also consult your
+                                builder and legal
+                                advisor.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- QUALITY CHECK (2) -->
+                    <div class="accordion-item" data-category="quality">
+                        <h2 class="accordion-header" id="q1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#q1c" aria-expanded="false" aria-controls="q1c">
+                                What is covered under overall Quality Check?
+                            </button>
+                        </h2>
+                        <div id="q1c" class="accordion-collapse collapse" aria-labelledby="q1"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We assess workmanship, finishing quality, alignment, sharp edges, paint consistency,
+                                cleanliness of
+                                joints, grout lines, and hardware installation. The idea is to ensure your home feels
+                                complete and ready
+                                to move-in.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-category="quality">
+                        <h2 class="accordion-header" id="q2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#q2c" aria-expanded="false" aria-controls="q2c">
+                                Do you classify issues in quality as minor or major?
+                            </button>
+                        </h2>
+                        <div id="q2c" class="accordion-collapse collapse" aria-labelledby="q2"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes. Observations are tagged as Minor / Major / Critical so that you and your builder
+                                can prioritise
+                                rectification based on severity and impact.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TILES CHECK (2) -->
+                    <div class="accordion-item" data-category="tiles">
+                        <h2 class="accordion-header" id="t1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#t1c" aria-expanded="false" aria-controls="t1c">
+                                How do you check tiles and flooring?
+                            </button>
+                        </h2>
+                        <div id="t1c" class="accordion-collapse collapse" aria-labelledby="t1"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We inspect for hollow tiles using tapping methods, check for lippage (uneven tile
+                                levels), cracked or
+                                chipped tiles, improper grout filling and tile alignment patterns across the rooms.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-category="tiles">
+                        <h2 class="accordion-header" id="t2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#t2c" aria-expanded="false" aria-controls="t2c">
+                                Do you also check bathroom and balcony tiles?
+                            </button>
+                        </h2>
+                        <div id="t2c" class="accordion-collapse collapse" aria-labelledby="t2"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we check tiles in toilets, balconies and utility areas for cracks, slope towards
+                                the drain, water
+                                stagnation and proper finishing around floor traps.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PLUMBING CHECK (2) -->
+                    <div class="accordion-item" data-category="plumbing">
+                        <h2 class="accordion-header" id="p1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#p1c" aria-expanded="false" aria-controls="p1c">
+                                What plumbing checks are performed?
+                            </button>
+                        </h2>
+                        <div id="p1c" class="accordion-collapse collapse" aria-labelledby="p1"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We check water pressure, flow at taps, leakages under basins, WC fittings, flush
+                                performance, drain
+                                outlets, geyser points and basic plumbing safety to ensure no visible leakage or
+                                backflow.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-category="plumbing">
+                        <h2 class="accordion-header" id="p2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#p2c" aria-expanded="false" aria-controls="p2c">
+                                Do you test hot water lines and CP fittings?
+                            </button>
+                        </h2>
+                        <div id="p2c" class="accordion-collapse collapse" aria-labelledby="p2"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Where hot water supply is available, we run tests on those lines as well. We also check
+                                basic alignment
+                                and operation of taps, diverters, mixers and shower fittings.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CEILING CHECK (2) -->
+                    <div class="accordion-item" data-category="ceiling">
+                        <h2 class="accordion-header" id="c1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#c1c" aria-expanded="false" aria-controls="c1c">
+                                What is covered under Ceiling Check?
+                            </button>
+                        </h2>
+                        <div id="c1c" class="accordion-collapse collapse" aria-labelledby="c1"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We observe ceilings for cracks, undulations, paint patches, damp marks, water seepage
+                                signs near beams,
+                                duct areas, and around ceiling corners or light points.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-category="ceiling">
+                        <h2 class="accordion-header" id="c2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#c2c" aria-expanded="false" aria-controls="c2c">
+                                Do you check false ceilings too?
+                            </button>
+                        </h2>
+                        <div id="c2c" class="accordion-collapse collapse" aria-labelledby="c2"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, where false ceilings are installed, we visually check for gaps, sagging, alignment
+                                and visible
+                                moisture or access issues around light and AC cut-outs.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WALLS CHECK (2) -->
+                    <div class="accordion-item" data-category="walls">
+                        <h2 class="accordion-header" id="w1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#w1c" aria-expanded="false" aria-controls="w1c">
+                                What wall-related issues do you look for?
+                            </button>
+                        </h2>
+                        <div id="w1c" class="accordion-collapse collapse" aria-labelledby="w1"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We check for cracks, hollow sounds, damp patches, poor putty finish, paint shade
+                                variation, and
+                                alignment issues especially near columns, beams and corners.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-category="walls">
+                        <h2 class="accordion-header" id="w2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#w2c" aria-expanded="false" aria-controls="w2c">
+                                Do you mark exact locations of wall issues?
+                            </button>
+                        </h2>
+                        <div id="w2c" class="accordion-collapse collapse" aria-labelledby="w2"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, wherever possible, observations are supported with photographs and clear
+                                descriptions so that the
+                                builder’s team can easily locate and fix them.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ELECTRICAL CHECK (2) -->
+                    <div class="accordion-item" data-category="electrical">
+                        <h2 class="accordion-header" id="e1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#e1c" aria-expanded="false" aria-controls="e1c">
+                                What is included under Electrical Check?
+                            </button>
+                        </h2>
+                        <div id="e1c" class="accordion-collapse collapse" aria-labelledby="e1"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We inspect DB, MCB arrangement, basic earthing checks (where feasible), switchboard
+                                operation, point
+                                mapping, socket polarity (basic tester) and visible wiring safety around the home.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-category="electrical">
+                        <h2 class="accordion-header" id="e2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#e2c" aria-expanded="false" aria-controls="e2c">
+                                Do you test all lights and plug points?
+                            </button>
+                        </h2>
+                        <div id="e2c" class="accordion-collapse collapse" aria-labelledby="e2"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we test accessible light points, fans and sockets for basic functionality. If a
+                                point is not live
+                                due to builder’s supply status, it will be mentioned in the report.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DOORS & WINDOWS (2) -->
+                    <div class="accordion-item" data-category="doorswindows">
+                        <h2 class="accordion-header" id="dw1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#dw1c" aria-expanded="false" aria-controls="dw1c">
+                                How do you inspect doors and windows?
+                            </button>
+                        </h2>
+                        <div id="dw1c" class="accordion-collapse collapse" aria-labelledby="dw1"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We check shutter operation, alignment, gap between frame and wall, lock and latch
+                                functioning, stopper
+                                performance, glass installation and basic sealing against dust/water ingress.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-category="doorswindows">
+                        <h2 class="accordion-header" id="dw2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#dw2c" aria-expanded="false" aria-controls="dw2c">
+                                Do you also check balcony sliding doors and mesh?
+                            </button>
+                        </h2>
+                        <div id="dw2c" class="accordion-collapse collapse" aria-labelledby="dw2"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we verify track smoothness, locking, mesh frame stability and visible sealing for
+                                balcony sliders
+                                and mesh shutters wherever installed.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FLOOR CHECK (2) -->
+                    <div class="accordion-item" data-category="floor">
+                        <h2 class="accordion-header" id="f1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#f1c" aria-expanded="false" aria-controls="f1c">
+                                What is checked under Floor Check?
+                            </button>
+                        </h2>
+                        <div id="f1c" class="accordion-collapse collapse" aria-labelledby="f1"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We check overall floor level, slope where required (to drains), loose or hollow sounds,
+                                chipped corners,
+                                expansion joints and overall neatness of finishing.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-category="floor">
+                        <h2 class="accordion-header" id="f2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#f2c" aria-expanded="false" aria-controls="f2c">
+                                Do you check for slippery surfaces?
+                            </button>
+                        </h2>
+                        <div id="f2c" class="accordion-collapse collapse" aria-labelledby="f2"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We make basic assessments of slipperiness, especially in toilets and balconies, and
+                                highlight surfaces
+                                that feel too smooth or risky when wet.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LIVING CONDITION AREA (2) -->
+                    <div class="accordion-item" data-category="living">
+                        <h2 class="accordion-header" id="l1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#l1c" aria-expanded="false" aria-controls="l1c">
+                                What do you mean by Living Condition Area checks?
+                            </button>
+                        </h2>
+                        <div id="l1c" class="accordion-collapse collapse" aria-labelledby="l1"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We look at ventilation, natural light, cross-breeze potential, placement of AC points,
+                                TV and power
+                                sockets to ensure the living area is practical and comfortable to use.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-category="living">
+                        <h2 class="accordion-header" id="l2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#l2c" aria-expanded="false" aria-controls="l2c">
+                                Do you flag layout issues that affect furniture placement?
+                            </button>
+                        </h2>
+                        <div id="l2c" class="accordion-collapse collapse" aria-labelledby="l2"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, wherever practical, we highlight layout-related points such as awkward pillar
+                                positions, limited
+                                space around doors, or odd niches that may affect your furniture planning.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARPET AREA MEASUREMENTS (2) -->
+                    <div class="accordion-item" data-category="carpet">
+                        <h2 class="accordion-header" id="ca1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#ca1c" aria-expanded="false" aria-controls="ca1c">
+                                How do you check carpet area measurements?
+                            </button>
+                        </h2>
+                        <div id="ca1c" class="accordion-collapse collapse" aria-labelledby="ca1"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We use measuring tapes and laser tools to check key room sizes and compare them with
+                                plan drawings.
+                                While we do practical checks, legal certification of carpet area should be taken from
+                                your builder and
+                                legal advisor.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-category="carpet">
+                        <h2 class="accordion-header" id="ca2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#ca2c" aria-expanded="false" aria-controls="ca2c">
+                                Will you provide an exact carpet area calculation?
+                            </button>
+                        </h2>
+                        <div id="ca2c" class="accordion-collapse collapse" aria-labelledby="ca2"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We do not issue legal carpet area certificates. Our checks are for practical
+                                confirmation and to flag
+                                any obvious mismatches that may require discussion with the builder.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DAMPNESS (2) -->
+                    <div class="accordion-item" data-category="dampness">
+                        <h2 class="accordion-header" id="d1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#d1c" aria-expanded="false" aria-controls="d1c">
+                                How do you detect dampness or seepage?
+                            </button>
+                        </h2>
+                        <div id="d1c" class="accordion-collapse collapse" aria-labelledby="d1"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We use visual inspection and, where required, moisture meters to detect dampness behind
+                                paint, around
+                                beams, in corners of toilets, balconies and external walls.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-category="dampness">
+                        <h2 class="accordion-header" id="d2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#d2c" aria-expanded="false" aria-controls="d2c">
+                                Can you identify exact source of a leak?
+                            </button>
+                        </h2>
+                        <div id="d2c" class="accordion-collapse collapse" aria-labelledby="d2"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We highlight damp areas, patterns and likely sources, but some complex seepage issues
+                                may require
+                                further specialised tests or invasive checks by the builder’s maintenance team.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MATERIAL CHECK (2) -->
+                    <div class="accordion-item" data-category="material">
+                        <h2 class="accordion-header" id="m1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#m1c" aria-expanded="false" aria-controls="m1c">
+                                What do you cover under Material Check?
+                            </button>
+                        </h2>
+                        <div id="m1c" class="accordion-collapse collapse" aria-labelledby="m1"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We verify whether installed materials (tiles, sanitary ware, CP fittings, switches,
+                                etc.) broadly match
+                                what was promised in the agreement or brochure, based on visible branding and
+                                specifications.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-category="material">
+                        <h2 class="accordion-header" id="m2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#m2c" aria-expanded="false" aria-controls="m2c">
+                                Do you test material strength on-site?
+                            </button>
+                        </h2>
+                        <div id="m2c" class="accordion-collapse collapse" aria-labelledby="m2"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                No destructive testing is done. Our focus is on visual quality, correct installation and
+                                brand/model
+                                verification wherever details are visible.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BRAND CHECK (2) -->
+                    <div class="accordion-item" data-category="brand">
+                        <h2 class="accordion-header" id="b1f">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#b1fc" aria-expanded="false" aria-controls="b1fc">
+                                What is checked in Brand Check?
+                            </button>
+                        </h2>
+                        <div id="b1fc" class="accordion-collapse collapse" aria-labelledby="b1f"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We cross-check the visible brand names on tiles, sanitary ware, CP fittings, switches
+                                and wiring (where
+                                possible) with the brands mentioned in your agreement or specification sheet.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-category="brand">
+                        <h2 class="accordion-header" id="b2f">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#b2fc" aria-expanded="false" aria-controls="b2fc">
+                                What if the installed brand is different from what was promised?
+                            </button>
+                        </h2>
+                        <div id="b2fc" class="accordion-collapse collapse" aria-labelledby="b2f"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Any visible mismatch is recorded in the report so you can take it up with the builder.
+                                Final commercial
+                                or legal discussions about brand changes should be handled by you and your legal
+                                advisor.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <a href="https://wa.me/919876543210?text=Hi! I want to book property inspection" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+
+    <div id="trinetra-loader">
+        <div class="loader-center">
+            <div class="loader-ring"></div>
+            <img src="img/Red and Black Modern Home Logo (1).png" class="loader-logo">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row gy-5 text-md-start">
+                <div class="col-lg-5">
+                    <div class="footer-logo mb-4 text-center text-lg-start">
+                        <img src="img/Red and Black Modern Home Logo.png" alt="Trinetra">
+                    </div>
+                    <h3 class="h4 fw-bold text-center text-lg-start">Trinetra Property Inspection</h3>
+                    <p class="mt-3 text-light opacity-90 text-center text-lg-start">
+                        Professional and detailed property inspection services across Hyderabad.
+                    </p>
+
+                </div>
+
+
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="services.html">Our Services</a>
+                        <a href="calcu & pricing.html">Calculation &amp; Pricing</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-heading">Contact Us</h5>
+                    <div class="contact-info">
+                        <p class="mb-3"><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p class="mb-3"><i class="fas fa-phone"></i> +91 87654 32109</p>
+                        <p class="mb-3"><i class="fas fa-envelope"></i> info@trinetraproperty.in</p>
+                        <p class="mb-4"><i class="fas fa-map-marker-alt"></i>Hyderabad</p>
+                    </div>
+                    <div class="text-center text-lg-start">
+                        <a href="tel:+919876543210" class="book-btn mt-3">
+                            <i class="fas fa-phone">
+                            </i> Call
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Icons - Left Side (Updated for FA6) -->
+            <div class="social-links-wrapper mt-4 text-center text-lg-start">
+                <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener" class="social-icon-link me-4"
+                    aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f" style="font-size: 1.5rem; color: var(--accent);"></i>
+                </a>
+                <a href="https://twitter.com/yourpage" target="_blank" rel="noopener" class="social-icon-link me-4"
+                    aria-label="Twitter">
+                    <i class="fa-brands fa-twitter" style="font-size: 1.5rem; color: var(--accent);"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/yourpage" target="_blank" rel="noopener"
+                    class="social-icon-link me-4" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in" style="font-size: 1.5rem; color: var(--accent);"></i>
+                </a>
+            </div>
+            <div class="footer-bottom text-center">
+                © 2025 Trinetra Property Inspection. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+
+
+        // NAVBAR SCROLL + PARALLAX MICRO EFFECT
+        const nav = document.querySelector('.custom-nav');
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY || window.pageYOffset;
+            if (!nav) return;
+
+            nav.classList.toggle('scrolled', scrollY > 50);
+        });
+
+        // AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-quart',
+            once: true
+        });
+
+        // PARALLAX BACKGROUNDS (hero, why, comparison, services)
+        const parallaxEls = document.querySelectorAll('.parallax-bg');
+
+        function handleParallax() {
+            const width = window.innerWidth || document.documentElement.clientWidth;
+            if (width < 768) {
+                parallaxEls.forEach(el => (el.style.transform = 'translateY(0)'));
+                return;
+            }
+
+            parallaxEls.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                const speedAttr = parseFloat(el.getAttribute('data-parallax')) || 0.2;
+                const offset = rect.top * speedAttr * -0.4;
+                el.style.transform = `translateY(${offset}px) scale(1.05)`;
+            });
+        }
+
+        window.addEventListener('scroll', handleParallax);
+        window.addEventListener('load', handleParallax);
+        window.addEventListener('resize', handleParallax);
+
+        // FAQ FILTERS
+        const filterButtons = document.querySelectorAll('.faq-filter-btn');
+        const faqItems = document.querySelectorAll('.accordion-item');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                faqItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // COUNTER ANIMATION
+        const counters = document.querySelectorAll('.counter');
+        let countersStarted = false;
+
+        function animateCounters() {
+            if (countersStarted || counters.length === 0) return;
+
+            const triggerPoint = window.innerHeight * 0.8;
+            let shouldStart = false;
+
+            counters.forEach(counter => {
+                const rect = counter.getBoundingClientRect();
+                if (rect.top < triggerPoint) {
+                    shouldStart = true;
+                }
+            });
+
+            if (!shouldStart) return;
+            countersStarted = true;
+
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'), 10);
+                const duration = 1800;
+                const startTime = performance.now();
+
+                function update(time) {
+                    const elapsed = time - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const value = Math.floor(progress * target);
+                    counter.textContent = value;
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    } else {
+                        counter.textContent = target;
+                    }
+                }
+
+                requestAnimationFrame(update);
+            });
+        }
+
+        window.addEventListener('scroll', animateCounters);
+        window.addEventListener('load', () => {
+            handleParallax();
+            animateCounters();
+        });
+
+        const track = document.querySelector('.partners-track');
+        track.innerHTML += track.innerHTML;  // duplicates the logos automatically
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

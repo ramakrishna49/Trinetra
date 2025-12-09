@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog - Trinetra Property Inspection</title>
+
+  <!-- Google Font: Poppins -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+     <link rel="icon" type="image/png" href="img/icon.png" >
+
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* =================== PREMIUM BLOG HERO =================== */
+    .blog-hero {
+      min-height: 70vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 80px;
+      overflow: hidden;
+     background-image: url(img/frames-for-your-heart-mR1CIDduGLc-unsplash.jpg);
+     
+      color: #fff;
+    }
+
+    .blog-hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .blog-hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 30px;
+    }
+
+    .blog-hero-title {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      margin-bottom: 15px;
+      margin-top: 10px;
+    }
+
+    .blog-hero-subtitle {
+      color: rgba(255, 255, 255, 0.82);
+      max-width: 620px;
+      margin: 0 auto 28px;
+      font-size: 1.02rem;
+    }
+
+    .blog-hero-meta {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    @media (max-width: 768px) {
+      .blog-hero {
+        min-height: 55vh;
+      }
+
+      .blog-hero-title {
+        font-size: 2.3rem;
+      }
+    }
+
+    /* =================== PREMIUM FEATURED SLIDER =================== */
+    .featured-slider-section {
+      padding: 80px 0 40px;
+      margin-top: -40px;
+      background: var(--light);
+    }
+
+    .featured-slider {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      height: 420px;
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    .featured-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    .featured-slide.active {
+      opacity: 1;
+    }
+
+    .featured-slide-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(68%);
+      transform: scale(1.03);
+      transition: transform 0.8s ease;
+    }
+
+    .featured-slide.active .featured-slide-img {
+      transform: scale(1.08);
+    }
+
+    .featured-slide-content {
+      position: absolute;
+      bottom: 50px;
+      left: 50px;
+      max-width: 580px;
+      color: #fff;
+    }
+
+    .featured-slide-content .tag {
+      background: rgba(255, 255, 255, 0.18);
+      padding: 5px 14px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      backdrop-filter: blur(8px);
+    }
+
+    .featured-slide-content h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 14px 0;
+    }
+
+    .featured-slide-content p {
+      font-size: 1rem;
+      color: #f1f1f1;
+      margin-bottom: 14px;
+    }
+
+    .slider-read-more {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .slider-read-more:hover {
+      color: #fff;
+    }
+
+    .slider-controls {
+      position: absolute;
+      bottom: 20px;
+      right: 40px;
+      display: flex;
+      gap: 14px;
+      z-index: 3;
+    }
+
+    .slider-controls button {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.25);
+      border: none;
+      border-radius: 50%;
+      backdrop-filter: blur(10px);
+      color: #fff;
+      font-size: 1rem;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slider-controls button:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    @media (max-width: 768px) {
+      .featured-slider {
+        height: 360px;
+      }
+
+      .featured-slide-content {
+        left: 20px;
+        right: 20px;
+        bottom: 30px;
+      }
+
+      .featured-slide-content h2 {
+        font-size: 1.6rem;
+      }
+
+      .slider-controls {
+        right: 20px;
+        bottom: 18px;
+      }
+    }
+
+    /* =================== BLOG MAIN LAYOUT =================== */
+    .blog-section {
+      padding: 60px 0 90px;
+      background: var(--light);
+    }
+
+    .blog-section .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 35px;
+      flex-wrap: wrap;
+    }
+
+    .blog-section .section-heading h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--primary);
+    }
+
+    .blog-section .section-heading p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* =================== FEATURED CARD (IN CONTENT) =================== */
+    .featured-card {
+      background: #ffffff;
+      border-radius: 24px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.3fr);
+      gap: 0;
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.12);
+      margin-bottom: 45px;
+    }
+
+    .featured-image {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .featured-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.03);
+      transition: transform 0.6s ease;
+    }
+
+    .featured-card:hover .featured-image img {
+      transform: scale(1.07);
+    }
+
+    .featured-content {
+      padding: 26px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .badge-mini {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(212, 196, 169, 0.18);
+      color: var(--primary);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      margin-bottom: 12px;
+    }
+
+    .featured-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .featured-excerpt {
+      color: #555;
+      font-size: 0.98rem;
+      margin-bottom: 18px;
+      line-height: 1.6;
+    }
+
+    .featured-meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .featured-read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.96rem;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .featured-read-more:hover {
+      transform: translateX(4px);
+      color: var(--primary);
+    }
+
+    @media (max-width: 992px) {
+      .featured-card {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-image {
+        max-height: 260px;
+      }
+    }
+
+    /* =================== BLOG GRID =================== */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    .blog-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      box-shadow: 0 14px 38px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 55px rgba(0, 0, 0, 0.12);
+    }
+
+    .blog-card-image {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-card-image img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .blog-card:hover .blog-card-image img {
+      transform: scale(1.06);
+    }
+
+    .blog-tag {
+      position: absolute;
+      bottom: 14px;
+      left: 16px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.68);
+      color: #fff;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+    }
+
+    .blog-card-body {
+      padding: 18px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .blog-card-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .blog-card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+
+    .blog-card-excerpt {
+      font-size: 0.93rem;
+      color: #555;
+      margin-bottom: 12px;
+      flex: 1;
+    }
+
+    .blog-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .blog-read-link {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .blog-read-link:hover {
+      color: var(--primary);
+    }
+
+    @media (max-width: 768px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* =================== SIDEBAR =================== */
+    .blog-sidebar {
+      position: sticky;
+      top: 100px;
+    }
+
+    .sidebar-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 20px 20px 22px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.07);
+      margin-bottom: 22px;
+    }
+
+    .sidebar-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .sidebar-search input {
+      border-radius: 999px;
+      border: 1px solid #ddd;
+      padding-left: 36px;
+      font-size: 0.9rem;
+    }
+
+    .sidebar-search .input-icon {
+      position: absolute;
+      top: 50%;
+      left: 14px;
+      transform: translateY(-50%);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .category-chip {
+      display: inline-flex;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #f5f3ed;
+      font-size: 0.82rem;
+      margin: 0 8px 8px 0;
+      color: var(--primary);
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .category-chip:hover {
+      background: rgba(212, 196, 169, 0.4);
+    }
+
+    .sidebar-mini-post {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 12px;
+      align-items: center;
+    }
+
+    .sidebar-mini-post img {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      object-fit: cover;
+    }
+
+    .sidebar-mini-title {
+      font-size: 0.9rem;
+      margin-bottom: 2px;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    .sidebar-mini-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 992px) {
+      .blog-sidebar {
+        position: static;
+        margin-top: 40px;
+      }
+    }
+
+    /* =================== PAGINATION =================== */
+    .blog-pagination {
+      margin-top: 38px;
+    }
+
+    .blog-pagination a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #fff;
+      margin: 0 5px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+      text-decoration: none;
+      color: var(--primary);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .blog-pagination a.active,
+    .blog-pagination a:hover {
+      background: var(--accent);
+      color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    
+/* Clean styling + no blue line ever */
+.social-links-wrapper .social-icon-link {
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+}
+
+.social-links-wrapper .social-icon-link:hover i {
+    color: var(--light) !important;
+    transform: translateY(-4px);
+}
+
+/* Force icons to show - overrides any conflicts */
+.social-links-wrapper i {
+    font-family: "Font Awesome 6 Brands" !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    text-rendering: auto !important;
+    line-height: 1 !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+  </style>
+</head>
+
+<body>
+
+ 
+  <!-- NAVBAR (About active) -->
+  <nav class="navbar navbar-expand-lg fixed-top custom-nav">
+    <div class="container-fluid px-3 px-lg-4">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/Red and Black Modern Home Logo (1).png" alt="Trinetra" height="120">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-lg-auto gap-lg-4 gap-3 text-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="calcu &amp; pricing.html">Calculation &amp; Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link  active" href="blog.html">Blog</a></li>
+        </ul>
+
+        <div class="nav-phone d-none d-lg-block">
+          <a href="tel:+919876543210">
+            <i class="fa-solid fa-phone"></i> +91 98765 43210
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <script>
+    window.addEventListener("scroll", () => {
+  const nav = document.querySelector(".custom-nav");
+  nav.classList.toggle("scrolled", window.scrollY > 50);
+});
+
+  </script>
+  <!-- PREMIUM BLOG HERO -->
+  <section class="blog-hero">
+    <div class="blog-hero-inner" data-aos="fade-up">
+      <div class="blog-hero-pill">
+        <i class="fa-regular fa-file-lines"></i>
+        Trinetra Insights
+      </div>
+      <h1 class="blog-hero-title">Guides to protect your new home investment.</h1>
+      <p class="blog-hero-subtitle">
+        Expert articles on inspections, dampness, electrical safety and possession checklists – written for first-time
+        homebuyers and experienced owners.
+      </p>
+      <div class="blog-hero-meta">
+        Updated monthly · Actionable, no-fluff insights
+      </div>
+    </div>
+  </section>
+
+  <!-- PREMIUM FEATURED SLIDER -->
+  <section class="featured-slider-section">
+    <div class="container position-relative">
+      <div class="featured-slider" id="featuredSlider">
+
+        <!-- Slide 1 -->
+        <div class="featured-slide active">
+          <img src="img/frames-for-your-heart-mR1CIDduGLc-unsplash.jpg" class="featured-slide-img"
+            alt="Pre-handover inspection">
+          <div class="featured-slide-content" data-aos="fade-up">
+            <span class="tag">Featured</span>
+            <h2>Why every new flat needs a pre-handover inspection.</h2>
+            <p>Small visible snags usually mean bigger hidden issues. A structured 400+ checkpoint inspection catches
+              them before you sign off.</p>
+           
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="featured-slide">
+          <img src="img/damp.jpg" class="featured-slide-img"
+            alt="Hidden dampness">
+          <div class="featured-slide-content" data-aos="fade-up">
+            <span class="tag">Dampness</span>
+            <h2>7 early signs of hidden moisture in brand new homes.</h2>
+            <p>Fresh paint can temporarily hide dampness. These visual and smell-based cues help you catch it early.</p>
+           
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="featured-slide">
+          <img src="img/ins.jpg" class="featured-slide-img"
+            alt="Electrical safety">
+          <div class="featured-slide-content" data-aos="fade-up">
+            <span class="tag">Electrical</span>
+            <h2>Electrical safety checklist before your family moves in.</h2>
+            <p>From DB configuration to earthing checks – here’s what our engineers verify in every home.</p>
+           
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Slider Controls -->
+      <div class="slider-controls">
+        <button id="prevSlide"><i class="fa-solid fa-chevron-left"></i></button>
+        <button id="nextSlide"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG CONTENT -->
+  <section class="blog-section">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Main Content -->
+        <div class="col-lg-8">
+          <!-- Section Heading -->
+          <div class="section-heading" data-aos="fade-up">
+            <h2>Latest from the Trinetra team</h2>
+            <p>Practical checklists and stories from real inspections in Hyderabad.</p>
+          </div>
+
+          <!-- Featured Article Card -->
+          <article class="featured-card" data-aos="fade-up" data-aos-delay="50">
+            <div class="featured-image">
+              <img src="img/frames-for-your-heart-mR1CIDduGLc-unsplash.jpg"
+                alt="Why every new flat needs an independent inspection" />
+            </div>
+            <div class="featured-content">
+              <div class="badge-mini">
+                <i class="fa-regular fa-star"></i> Deep-dive Guide
+              </div>
+              <h2 class="featured-title">
+                Why an independent home inspection is the best money you’ll spend before possession.
+              </h2>
+              <p class="featured-excerpt">
+                Water seepage, hollow tiles, unsafe wiring and misaligned frames are easier (and cheaper) to fix before
+                you move in. Here’s how our engineer-led process uncovers them with tools and structured checklists.
+              </p>
+              <div class="featured-meta">
+                <span><i class="fa-regular fa-user me-1"></i>Trinetra Engineering Team</span>
+                <span><i class="fa-regular fa-calendar me-1"></i> Feb 2025</span>
+                <span><i class="fa-regular fa-clock me-1"></i> 6 min read</span>
+              </div>
+              
+            </div>
+          </article>
+
+          <!-- Blog Grid -->
+          <div class="blog-grid">
+            <!-- Post 1 -->
+            <article class="blog-card" data-aos="fade-up" data-aos-delay="50">
+              <div class="blog-card-image">
+                <img src="img/re-ins.jpg" alt="Signs of hidden dampness" />
+                <span class="blog-tag">Dampness</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  HYDERABAD HOMES · FEB 2025
+                </div>
+                <h3 class="blog-card-title">
+                  7 subtle signs of hidden dampness in brand new apartments.
+                </h3>
+                <p class="blog-card-excerpt">
+                  Fresh paint often hides early moisture ingress. Learn how to spot faint patches, smell and texture
+                  changes that indicate deeper seepage issues.
+                </p>
+                <div class="blog-card-footer">
+                  <span><i class="fa-regular fa-clock me-1"></i>4 min read</span>
+                 
+                </div>
+              </div>
+            </article>
+
+            <!-- Post 2 -->
+            <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="blog-card-image">
+                <img src="img/ser.jpg" alt="Electrical safety checklist" />
+                <span class="blog-tag">Electrical</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  SAFETY FIRST · JAN 2025
+                </div>
+                <h3 class="blog-card-title">
+                  Electrical safety checklist before your family moves in.
+                </h3>
+                <p class="blog-card-excerpt">
+                  From DB configuration to earthing checks and socket polarity – here’s a simple checklist you can ask
+                  your builder or electrician to walk through.
+                </p>
+                <div class="blog-card-footer">
+                  <span><i class="fa-regular fa-clock me-1"></i>5 min read</span>
+                  
+                </div>
+              </div>
+            </article>
+
+            <!-- Post 3 -->
+            <article class="blog-card" data-aos="fade-up" data-aos-delay="150">
+              <div class="blog-card-image">
+                <img src="img/ins.jpg" alt="Hollow tiles" />
+                <span class="blog-tag">Flooring</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  QUALITY CHECK · DEC 2024
+                </div>
+                <h3 class="blog-card-title">
+                  How we detect hollow tiles and why they matter long term.
+                </h3>
+                <p class="blog-card-excerpt">
+                  Tiles that sound “hollow” during tapping can loosen or crack over time. Here’s how professionals
+                  systematically check every room.
+                </p>
+                <div class="blog-card-footer">
+                  <span><i class="fa-regular fa-clock me-1"></i>3 min read</span>
+                  
+                </div>
+              </div>
+            </article>
+
+            <!-- Post 4 -->
+            <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="blog-card-image">
+                <img src="img/ins.jpg" alt="Builder handover vs inspection" />
+                <span class="blog-tag">Possession</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  POSSESSION GUIDE · NOV 2024
+                </div>
+                <h3 class="blog-card-title">
+                  Builder walk-through vs tool-based inspection: key differences.
+                </h3>
+                <p class="blog-card-excerpt">
+                  A quick builder walk-through is not the same as a professional audit. Understand what each covers so
+                  you can make an informed decision.
+                </p>
+                <div class="blog-card-footer">
+                  <span><i class="fa-regular fa-clock me-1"></i>4 min read</span>
+                 
+                </div>
+              </div>
+            </article>
+          </div>
+
+        
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          <div class="blog-sidebar">
+            <!-- Search -->
+            <div class="sidebar-card" data-aos="fade-left">
+              <div class="sidebar-title">Search articles</div>
+              <div class="position-relative sidebar-search">
+                <span class="input-icon">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <input type="text" class="form-control" placeholder="Search topics (e.g. dampness, tiles)..." />
+              </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="sidebar-card" data-aos="fade-left" data-aos-delay="80">
+              <div class="sidebar-title">Categories</div>
+              <div>
+                <span class="category-chip">Inspection tips</span>
+                <span class="category-chip">Dampness</span>
+                <span class="category-chip">Electrical</span>
+                <span class="category-chip">Flooring</span>
+                <span class="category-chip">Plumbing</span>
+                <span class="category-chip">Safety</span>
+              </div>
+            </div>
+
+            <!-- Recent mini posts -->
+            <div class="sidebar-card" data-aos="fade-left" data-aos-delay="160">
+              <div class="sidebar-title">Recently published</div>
+
+              <div class="sidebar-mini-post">
+                <img src="img/damp.jpg" alt="recent1" />
+                <div>
+                  <div class="sidebar-mini-title">Checklist before key handover.</div>
+                  <div class="sidebar-mini-meta">Feb 2025 · 3 min</div>
+                </div>
+              </div>
+
+              <div class="sidebar-mini-post">
+                <img src="img/ins.jpg" alt="recent2" />
+                <div>
+                  <div class="sidebar-mini-title">Common bathroom seepage points.</div>
+                  <div class="sidebar-mini-meta">Jan 2025 · 4 min</div>
+                </div>
+              </div>
+
+              <div class="sidebar-mini-post mb-0">
+                <img src="img/ser.jpg" alt="recent3" />
+                <div>
+                  <div class="sidebar-mini-title">Why balcony slopes are critical.</div>
+                  <div class="sidebar-mini-meta">Dec 2024 · 3 min</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a href="https://wa.me/919876543210?text=Hi! I want to book property inspection" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row gy-5 text-md-start">
+        <div class="col-lg-5">
+          <div class="footer-logo mb-4 text-center text-lg-start">
+            <img src="img/Red and Black Modern Home Logo.png" alt="Trinetra" />
+          </div>
+          <h3 class="h4 fw-bold text-center text-lg-start">
+            Trinetra Property Inspection
+          </h3>
+          <p class="mt-3 text-light opacity-90 text-center text-lg-start">
+            Professional and detailed property inspection services across Hyderabad.
+          </p>
+        </div>
+
+       
+  <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="services.html">Our Services</a>
+                        <a href="calcu & pricing.html">Calculation &amp; Pricing</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-heading">Contact Us</h5>
+                    <div class="contact-info">
+                        <p class="mb-3"><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p class="mb-3"><i class="fas fa-phone"></i> +91 87654 32109</p>
+                        <p class="mb-3"><i class="fas fa-envelope"></i> info@trinetraproperty.in</p>
+                        <p class="mb-4"><i class="fas fa-map-marker-alt"></i>Hyderabad</p>
+                    </div>
+                    <div class="text-center text-lg-start">
+                        <a href="tel:+919876543210" class="book-btn mt-3">
+                            <i class="fas fa-phone">
+                            </i> Call 
+                        </a>
+                    </div>
+                </div>
+            </div>
+      <!-- Social Media Icons - Left Side (Updated for FA6) -->
+<div class="social-links-wrapper mt-4 text-center text-lg-start">
+    <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener" class="social-icon-link me-4" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f" style="font-size: 1.5rem; color: var(--accent);"></i>
+    </a>
+    <a href="https://twitter.com/yourpage" target="_blank" rel="noopener" class="social-icon-link me-4" aria-label="Twitter">
+        <i class="fa-brands fa-twitter" style="font-size: 1.5rem; color: var(--accent);"></i>
+    </a>
+    <a href="https://www.linkedin.com/company/yourpage" target="_blank" rel="noopener" class="social-icon-link me-4" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in" style="font-size: 1.5rem; color: var(--accent);"></i>
+    </a>
+</div>
+
+      <div class="footer-bottom text-center mt-4">
+        © 2025 Trinetra Property Inspection. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+<div id="trinetra-loader">
+    <div class="loader-center">
+        <div class="loader-ring"></div>
+        <img src="img/Red and Black Modern Home Logo (1).png" class="loader-logo">
+    </div>
+</div>
+  <!-- JS -->
+   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 900,
+      easing: "ease-out-quart",
+      once: true,
+    });
+
+    // Featured Slider Logic
+    const slides = document.querySelectorAll(".featured-slide");
+    const prevBtn = document.getElementById("prevSlide");
+    const nextBtn = document.getElementById("nextSlide");
+    let currentIndex = 0;
+    let sliderInterval;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+      currentIndex = index;
+    }
+
+    function nextSlide() {
+      let newIndex = currentIndex + 1;
+      if (newIndex >= slides.length) newIndex = 0;
+      showSlide(newIndex);
+    }
+
+    function prevSlideFn() {
+      let newIndex = currentIndex - 1;
+      if (newIndex < 0) newIndex = slides.length - 1;
+      showSlide(newIndex);
+    }
+
+    function startAutoSlide() {
+      sliderInterval = setInterval(nextSlide, 2000);
+    }
+
+    function stopAutoSlide() {
+      clearInterval(sliderInterval);
+    }
+
+    if (slides.length) {
+      startAutoSlide();
+
+      nextBtn.addEventListener("click", () => {
+        stopAutoSlide();
+        nextSlide();
+        startAutoSlide();
+      });
+
+      prevBtn.addEventListener("click", () => {
+        stopAutoSlide();
+        prevSlideFn();
+        startAutoSlide();
+      });
+
+      // Optional: pause on hover
+      const slider = document.getElementById("featuredSlider");
+      slider.addEventListener("mouseenter", stopAutoSlide);
+      slider.addEventListener("mouseleave", startAutoSlide);
+    }
+  </script>
+  <script>
+    // Blog Search Function
+const searchInput = document.querySelector('.sidebar-search input');
+const blogCards = document.querySelectorAll('.blog-card');
+const featuredCard = document.querySelector('.featured-card');
+
+searchInput.addEventListener('keyup', function () {
+  const query = this.value.toLowerCase().trim();
+
+  // Search Featured Article
+  if (featuredCard) {
+    const featuredText = featuredCard.innerText.toLowerCase();
+    featuredCard.style.display = featuredText.includes(query) ? "grid" : "none";
+  }
+
+  // Search Blog Cards
+  blogCards.forEach(card => {
+    const text = card.innerText.toLowerCase();
+    if (text.includes(query)) {
+      card.style.display = "flex";
+    } else {
+      card.style.display = "none";
+    }
+  });
+});
+
+  </script>
+</body>
+
+</html>
