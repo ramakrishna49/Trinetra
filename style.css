@@ -5,10 +5,9 @@
     --muted: #7a7a7a;
 }
 
-
-
-    /* TRINETRA PREMIUM LOADER */
-#trinetra-loader {
+    /* TRINETRA PREMIUM LOADER
+    
+    #trinetra-loader {
   position: fixed;
   inset: 0;
   background: #ffffff;
@@ -58,7 +57,9 @@
   to {
     transform: rotate(360deg);
   }
+
 }
+
 /* RESET */
 *,
 *::before,
@@ -66,6 +67,8 @@
     box-sizing: border-box;
 
 }
+    */
+
 
 body {
     margin: 0;
